@@ -65,15 +65,17 @@ body {
   text-align: center;
   color: transparent;
   width: 100%;
+  -webkit-box-shadow: 0 1px 3px #333;
+          box-shadow: 0 1px 3px #333;
 }
 
 .home .homeContent .content h1 {
   text-transform: uppercase;
   color: transparent;
-  font-size: 6rem;
+  font-size: 7rem;
   line-height: 0.85;
   letter-spacing: 0.2rem;
-  background: url(https://media.giphy.com/media/CKlafeh1NAxz35KTq4/giphy.gif) center/cover;
+  background: url(https://media.giphy.com/media/xUPGcyTe2I8FvXy9EI/giphy.gif) center/cover;
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -464,6 +466,7 @@ body {
 }
 
 .Footer .signature {
+  font-family: "Orbitron", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -476,7 +479,7 @@ body {
   text-align: center;
   letter-spacing: 0.1rem;
   font-size: 0.7rem;
-  padding-right: 10px;
+  padding-right: 20px;
 }
 
 .Footer .signature p {

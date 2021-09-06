@@ -21,14 +21,15 @@
         text-align: center;
         color: transparent;
         width: 100%;
+        box-shadow: $shadow;
       }
       h1 {
         text-transform: uppercase;
         color: transparent;
-        font-size: 6rem;
+        font-size: 7rem;
         line-height: 0.85;
         letter-spacing: 0.2rem;
-        background: url(https://media.giphy.com/media/CKlafeh1NAxz35KTq4/giphy.gif)
+        background: url(https://media.giphy.com/media/xUPGcyTe2I8FvXy9EI/giphy.gif)
           center/cover;
         background-clip: text;
         -webkit-background-clip: text;
