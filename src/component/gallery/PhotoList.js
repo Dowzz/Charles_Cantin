@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import {photoData} from '../../data/photoData'
 import Photo from './Photo';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+
+
 
 
 export class PhotoList extends Component {

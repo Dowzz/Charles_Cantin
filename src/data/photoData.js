@@ -4,31 +4,48 @@ export const photoData=[
         name:'FromScratch',
         categorie:'Portrait',
         source:'./media/hong-kong.jpg',
-        info:''
         
     },
     {
         id:(Math.random()),
         name:'Dice Game',
         categorie:'Portrait',
-        source:'',
-        info:''
+        source:'./media/hong-kong.jpg',
         
     },
     {
         id:(Math.random()),
         name:'Fantasia',
         categorie:'Portrait',
-        source:'',
-        info:''
+        source:'./media/hong-kong.jpg',
         
     },
     {
         id:(Math.random()),
         name:'toto',
         categorie:'Mariage',
-        source:'',
-        info:''
+        source:'./media/hong-kong.jpg',
+        
+    },
+    {
+        id:(Math.random()),
+        name:'Bébé',
+        categorie:'Portrait',
+        source:'./media/hong-kong.jpg',
+        
+    },
+    {
+        id:(Math.random()),
+        name:'Bébé',
+        categorie:'Portrait',
+        source:'./media/hong-kong.jpg',
+        
+    },
+    {
+        id:(Math.random()),
+        name:'Bébé',
+        categorie:'Portrait',
+        source:'./media/hong-kong.jpg',
         
     },
     {
@@ -36,7 +53,6 @@ export const photoData=[
         name:'Bébé',
         categorie:'Portrait',
         source:'',
-        info:''
         
     },
     {
@@ -44,7 +60,6 @@ export const photoData=[
         name:'Bébé',
         categorie:'Portrait',
         source:'',
-        info:''
         
     },
     {
@@ -52,7 +67,6 @@ export const photoData=[
         name:'Bébé',
         categorie:'Portrait',
         source:'',
-        info:''
         
     },
     {
@@ -60,7 +74,6 @@ export const photoData=[
         name:'Bébé',
         categorie:'Portrait',
         source:'',
-        info:''
         
     },
     {
@@ -68,7 +81,6 @@ export const photoData=[
         name:'Bébé',
         categorie:'Portrait',
         source:'',
-        info:''
         
     },
     {
@@ -76,7 +88,6 @@ export const photoData=[
         name:'Bébé',
         categorie:'Portrait',
         source:'',
-        info:''
         
     },
     {
@@ -84,7 +95,6 @@ export const photoData=[
         name:'Bébé',
         categorie:'Portrait',
         source:'',
-        info:''
         
     },
     {
@@ -92,7 +102,6 @@ export const photoData=[
         name:'Bébé',
         categorie:'Portrait',
         source:'',
-        info:''
         
     },
     {
@@ -100,7 +109,6 @@ export const photoData=[
         name:'Bébé',
         categorie:'Portrait',
         source:'',
-        info:''
         
     },
     {
@@ -108,31 +116,6 @@ export const photoData=[
         name:'Bébé',
         categorie:'Portrait',
         source:'',
-        info:''
-        
-    },
-    {
-        id:(Math.random()),
-        name:'Bébé',
-        categorie:'Portrait',
-        source:'',
-        info:''
-        
-    },
-    {
-        id:(Math.random()),
-        name:'Bébé',
-        categorie:'Portrait',
-        source:'',
-        info:''
-        
-    },
-    {
-        id:(Math.random()),
-        name:'Bébé',
-        categorie:'Portrait',
-        source:'',
-        info:''
         
     },
 ]
