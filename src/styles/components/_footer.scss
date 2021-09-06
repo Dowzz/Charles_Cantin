@@ -2,9 +2,9 @@
   display: flex;
   position: fixed;
   bottom: 0;
-  width: fit-content;
+  width: autoi;
   height: fit-content;
-  left: 55%;
+  left: 50%;
   transform: translate(-50%);
   background: $onyx;
   border-radius: $borderRadius;
@@ -53,6 +53,21 @@
         color: $orange;
         background: $charbon;
       }
+    }
+  }
+  .login {
+    font-family: $font-2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: $opal;
+    letter-spacing: 0.1rem;
+    margin-left: 6rem;
+    margin-right: 25%;
+    &:hover {
+      color: $orange;
     }
   }
 }

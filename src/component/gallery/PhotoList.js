@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {photoData} from '../../data/photoData'
 import Photo from './Photo';
 
+
 export class PhotoList extends Component {
     state= {
         photos:photoData,

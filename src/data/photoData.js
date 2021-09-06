@@ -3,7 +3,7 @@ export const photoData=[
         id:(Math.random()),
         name:'FromScratch',
         categorie:'Portrait',
-        source:'',
+        source:'./media/hong-kong.jpg',
         info:''
         
     },

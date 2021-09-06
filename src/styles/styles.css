@@ -75,7 +75,7 @@ body {
   font-size: 7rem;
   line-height: 0.85;
   letter-spacing: 0.2rem;
-  background: url(https://media.giphy.com/media/xUPGcyTe2I8FvXy9EI/giphy.gif) center/cover;
+  background: url(https://media.giphy.com/media/ZD1p6fjk2C1GuqDXz2/giphy.gif) center/cover;
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -93,9 +93,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 8rem 0 0 2rem;
+  margin: 2rem 0 0 2rem;
   position: absolute;
-  font-family: "Righteous", cursive;
+  font-family: "saira Stencil One", cursive;
 }
 
 .navbar ul {
@@ -134,11 +134,11 @@ body {
 }
 
 .navbar a:hover {
-  color: #ca895f;
+  color: #d16f2e;
 }
 
 .navbar .navActive {
-  color: #ca895f;
+  color: #d16f2e;
 }
 
 .photoListContent {
@@ -201,7 +201,7 @@ body {
   height: 0.9rem;
   width: 0.9rem;
   border-radius: 50%;
-  border: 2px solid #ca895f;
+  border: 2px solid #d16f2e;
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -219,7 +219,7 @@ body {
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background: #ca895f;
+  background: #d16f2e;
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-transform-origin: center;
@@ -234,7 +234,7 @@ body {
 }
 
 .radioDisplay li input:checked + label {
-  color: #ca895f;
+  color: #d16f2e;
 }
 
 .radioDisplay li label {
@@ -398,7 +398,7 @@ body {
 }
 
 .photos .showInfos .button:hover {
-  background: #ca895f;
+  background: #d16f2e;
 }
 
 .photos .showInfos .text {
@@ -417,13 +417,11 @@ body {
   display: flex;
   position: fixed;
   bottom: 0;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: autoi;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  left: 55%;
+  left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
   background: #32373b;
@@ -450,7 +448,7 @@ body {
 }
 
 .Footer ul li a:visited {
-  color: #ca895f;
+  color: #d16f2e;
 }
 
 .Footer ul li:nth-child(1) {
@@ -487,7 +485,30 @@ body {
 }
 
 .Footer .signature p:hover {
-  color: #ca895f;
+  color: #d16f2e;
   background: #424651;
+}
+
+.Footer .login {
+  font-family: "Orbitron", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: #c5decd;
+  letter-spacing: 0.1rem;
+  margin-left: 6rem;
+  margin-right: 25%;
+}
+
+.Footer .login:hover {
+  color: #d16f2e;
 }
 /*# sourceMappingURL=styles.css.map */
