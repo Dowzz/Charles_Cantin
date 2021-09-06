@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap&family=Orbitron&family=Righteous&display=swap");
+$font-1: "saira Stencil One", cursive;
+$font-2: "Orbitron", sans-serif;
+$font-3: "Righteous", cursive;
+
+$borderRadius: 25px;
+$shadow: 0 1px 3px #333;
+$minHeight: 95vh;
+
+$orange: #ca895f;
+$charbon: #424651;
+$opal: #c5decd;
+$red: #960200;
+$onyx: #32373b;
+
+html {
+  overflow: hidden;
+  background-color: grey;
+  min-height: 100vh;
+  background: url("../media/camera.jpg");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: $font-1;
+  color: $onyx;
+}
+.home,
+.gallery,
+.contact,
+.prestation {
+  display: flex;
+
+  @media screen and (max-width: 850px) {
+    display: block !important;
+  }
+}

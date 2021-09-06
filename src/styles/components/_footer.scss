@@ -1,0 +1,57 @@
+.Footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: fit-content;
+  height: fit-content;
+  left: 55%;
+  transform: translate(-50%);
+  background: $onyx;
+  border-radius: $borderRadius;
+  ul {
+    display: flex;
+    width: 264px;
+    padding: 0 5px;
+    list-style: none;
+
+    li {
+      font-size: 1.5rem;
+
+      color: $opal;
+      border-radius: 50%;
+      padding: 0.8rem 0.5rem;
+      transition: 0.3s;
+      cursor: pointer;
+
+      a:visited {
+        color: $orange;
+      }
+      &:nth-child(1) {
+        padding: 0.5rem 0.8rem;
+      }
+      &:nth-child(2) {
+        padding: 0.5rem 0.85rem;
+      }
+      &:hover {
+        background: $charbon;
+      }
+    }
+  }
+  .signature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    font-size: 0.7rem;
+    padding-right: 10px;
+
+    p {
+      color: $opal;
+      &:hover {
+        color: $orange;
+        background: $charbon;
+      }
+    }
+  }
+}

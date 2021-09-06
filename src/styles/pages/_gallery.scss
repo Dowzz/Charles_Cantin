@@ -1,0 +1,202 @@
+.photoListContent {
+  position: fixed;
+  top: 10rem;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 120px 45%;
+  grid-template-areas:
+    "1"
+    "2";
+}
+.radioDisplay {
+  position: fixed;
+  grid-area: 1;
+  border-radius: $borderRadius;
+  display: flex;
+  width: 70%;
+  padding: 0.5rem 0.5rem;
+  margin: auto 20rem;
+  background: $charbon;
+  user-select: none;
+  box-shadow: $shadow;
+  top: 10rem;
+
+  li {
+    color: $opal;
+    font-family: $font-3;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 0 1rem;
+    flex: 1;
+    z-index: 2;
+    list-style: none;
+
+    input[type="radio"] {
+      visibility: hidden;
+      position: relative;
+
+      &:before {
+        content: "";
+        visibility: visible;
+        position: absolute;
+        top: -2px;
+        left: -12px;
+        height: 0.9rem;
+        width: 0.9rem;
+        border-radius: 50%;
+        border: 2px solid $orange;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      &:after {
+        content: "";
+        visibility: visible;
+        position: absolute;
+        top: -2px;
+        left: -12px;
+        height: 0.9rem;
+        width: 0.9rem;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.3s;
+        background: $orange;
+        transform: scale(0);
+        transform-origin: center;
+      }
+    }
+    input:checked:after {
+      transform: scale(1.17) translate(-25%, -25%);
+      top: 4px;
+      left: -6px;
+    }
+    input:checked + label {
+      color: $orange;
+    }
+    label {
+      cursor: pointer;
+    }
+  }
+}
+
+.photos {
+  overflow-y: scroll;
+  box-shadow: $shadow;
+  border-radius: $borderRadius;
+  grid-area: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 25rem;
+  width: 65%;
+  min-height: 200px;
+
+  .photo {
+    background: $onyx;
+    border-radius: $borderRadius;
+    margin: 1rem;
+    text-align: center;
+    width: 20%;
+    height: 180px;
+    padding: 1rem;
+    box-shadow: $shadow;
+    display: grid;
+    grid-template-rows: 75%;
+    grid-template-areas:
+      "1"
+      "2"
+      "3";
+  }
+  .info {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+  }
+  h3 {
+    color: $opal;
+    grid-area: 2;
+    font-family: $font-3;
+    font-size: 1.65rem;
+    justify-content: center;
+  }
+  img {
+    border-radius: $borderRadius;
+    grid-area: 1;
+    object-fit: c;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 2px 6px #333;
+    cursor: pointer;
+  }
+  .infos {
+    grid-area: 3;
+    color: $opal;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .showInfos {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.507);
+    animation: popup 0.3s ease forwards;
+    transform-origin: center;
+
+    .infosContent {
+      position: relative;
+      top: 10%;
+      width: 600px;
+      margin: 0 auto;
+      color: $opal;
+      background: $onyx;
+      border-radius: $borderRadius;
+      padding: 2rem;
+      box-shadow: 0 10px 10px #333;
+      animation: popup 0.6s ease forwards;
+      transform: scale(0);
+      transform-origin: center;
+
+      @keyframes popup {
+        to {
+          transform: scale(1);
+        }
+      }
+    }
+    .head {
+      display: flex;
+      justify-content: space-around;
+      margin: 1rem 0;
+    }
+    h2 {
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+    .button {
+      cursor: pointer;
+      color: $opal;
+      background: $onyx;
+      border-radius: $borderRadius;
+      padding: 1rem;
+      transition: 0.2s;
+
+      &:hover {
+        background: $orange;
+      }
+    }
+    .text {
+      text-align: justify;
+      padding-bottom: 1rem;
+    }
+    .return {
+      margin: 1rem auto;
+      width: 200px;
+    }
+  }
+}
