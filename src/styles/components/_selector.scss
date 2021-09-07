@@ -51,7 +51,7 @@
       }
     }
     input:checked:after {
-      transform: scale(1.17) translate(-25%, -25%);
+      transform: scale(1.1) translate(-25%, -25%);
       top: 2px;
       left: -6px;
     }
@@ -71,7 +71,7 @@
   margin: 50px auto 0;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: $shadow;
 }
 @media screen and (max-width: 700px) {
   .container-slider {
@@ -96,6 +96,7 @@ img {
   top: 85%;
   left: 50%;
   transform: translate(-50%);
+  text-align: center;
 }
 .text {
   padding: 10px;

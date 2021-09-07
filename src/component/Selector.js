@@ -53,7 +53,6 @@ export default class Selector extends Component {
                         .map(item => {
                             return (
                                 <>
-                             
                                 <div className="slide"
                                 key={item.id}
                                 >
@@ -65,8 +64,8 @@ export default class Selector extends Component {
                                     <div className="overlay">
                                         <div className="text">{item.name}</div>
                                     </div>
-                                </div>
-                              
+
+                                </div>     
                                 </>
                             )
                         })
