@@ -20,7 +20,7 @@ $minHeight: 95vh;
 }
 
 html {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 * {
   box-sizing: border-box;
@@ -28,7 +28,8 @@ html {
   padding: 0;
 }
 body {
-  overflow: hidden;
+  max-width: 1200px;
+  overflow-x: hidden;
   margin: 1rem auto;
   font-family: $font-1;
   color: $onyx;
@@ -78,4 +79,8 @@ a:visited {
   @media screen and (max-width: 850px) {
     margin-left: 0 !important;
   }
+}
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
 }

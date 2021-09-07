@@ -1,7 +1,7 @@
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  left: 3rem;
+  left: 0;
   padding: 5px;
   background: $charbon;
   border-radius: $borderRadius;
@@ -10,8 +10,8 @@
   @include verticalCenter;
 }
 .footer .social a {
-  font-size: 24px;
-  width: 40px;
+  font-size: 20px;
+  width: 30px;
   height: 40px;
   line-height: 40px;
   display: inline-block;
@@ -37,6 +37,7 @@
   margin-right: 5px;
   padding: 10px;
   color: $opal;
+  font-size: 15px;
 }
 .footer .login a {
   margin-left: 5px;

@@ -3,7 +3,6 @@ import { photoData } from '../data/photoData'
 
 
 
-
 export default class Selector extends Component {
         
     state ={
@@ -53,24 +52,22 @@ export default class Selector extends Component {
                         photos
                         .filter(item => item.categorie.includes(selectedRadio))
                         .map(item => {
-                            return ( 
+                            return (
+                            
                                 <div className="slide"
                                 key={item.id}
                                 >
                                     <img
-                                    className="image"
                                     src={item.source}
                                     alt="" 
                                     />
-                                    <div className="overlay">
-                                        <div className="text">{item.name}</div>
-
-                                    </div>
-                                           
+                                     <div className="text">{item.name}</div>
+  
                                 </div>
-                            )
-                        })
-                    }
+                                )
+                            }   
+                        )
+                    }         
                 </div>
             </div>
         )
