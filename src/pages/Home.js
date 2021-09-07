@@ -8,11 +8,11 @@ const Home = () => {
             <Navbar/>
             <div className="homeContent">
                 <div className="content">
-            <h1 className="title">Charles Cantin 
-            <br />Photographe</h1>
-            <Footer></Footer>
+                    <h1 className="title">Charles Cantin 
+                    <br />Photographe</h1>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

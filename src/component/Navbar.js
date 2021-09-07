@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <div className="sidebar">
+     
             <div className="navbar">
                 <ul>
                     <li><NavLink exact to="/"
@@ -28,7 +28,7 @@ const Navbar = () => {
                     </li>
                 </ul>
              </div>
-         </div>
+
     );
 };
 

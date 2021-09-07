@@ -1,44 +1,36 @@
-.sidebar {
-  z-index: 1;
-  position: fixed;
-  top: 0;
-  max-height: 200px;
-  max-width: 500px;
+body {
+  min-height: 100vh;
 }
-
 .navbar {
-  display: flex;
-  margin: 2rem 0 0 2rem;
-  position: absolute;
-  font-family: $font-1;
+  margin: 2rem 0 0 3rem;
+  position: fixed;
+  left: 0;
+  top: -2rem;
   ul {
     width: 1px;
-    list-style: none;
     perspective: 500px;
   }
   ul:hover li:not(:hover) {
     opacity: 0.5;
   }
   li {
-    transform: rotateY(30deg) scale(1.3);
+    transform: rotateY(30deg) scaleX(1.3);
     transform-origin: left;
     transition: 0.3s;
-    margin-top: 50px;
-    border: $charbon solid 1px;
+    border: $charbon 5px solid;
   }
   li:hover {
     transform: rotateY(3deg);
   }
-  a {
-    font-size: 6rem;
-    text-decoration: none;
-    color: $charbon;
+  li a {
+    margin-left: 10px;
+    font-size: 8rem;
     box-shadow: $shadow;
+    line-height: 1.5;
+    opacity: 0.6;
   }
-  a:hover {
-    color: $orange;
-  }
-  .navActive {
-    color: $orange;
+  li a.active,
+  li a:hover {
+    opacity: 1;
   }
 }

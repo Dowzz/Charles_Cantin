@@ -1,13 +1,13 @@
 import React from 'react';
 import Footer from '../component/Footer';
-import PhotoList from '../component/gallery/PhotoList';
 import Navbar from '../component/Navbar';
+import Slider from '../component/Slider/Slider';
 
 const Gallery = () => {
     return (
         <div>
            <Navbar/>
-           <PhotoList></PhotoList>
+           <Slider/>
            <Footer></Footer>
         </div>
     );

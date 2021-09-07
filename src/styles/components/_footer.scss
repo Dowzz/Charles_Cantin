@@ -1,73 +1,47 @@
-.Footer {
-  display: flex;
-  position: fixed;
+.footer {
+  position: absolute;
   bottom: 0;
-  width: autoi;
-  height: fit-content;
-  left: 50%;
-  transform: translate(-50%);
-  background: $onyx;
+  left: 3rem;
+  padding: 5px;
+  background: $charbon;
   border-radius: $borderRadius;
-  ul {
-    display: flex;
-    width: 264px;
-    padding: 0 5px;
-    list-style: none;
-
-    li {
-      font-size: 1.5rem;
-
-      color: $opal;
-      border-radius: 50%;
-      padding: 0.8rem 0.5rem;
-      transition: 0.3s;
-      cursor: pointer;
-
-      a:visited {
-        color: $orange;
-      }
-      &:nth-child(1) {
-        padding: 0.5rem 0.8rem;
-      }
-      &:nth-child(2) {
-        padding: 0.5rem 0.85rem;
-      }
-      &:hover {
-        background: $charbon;
-      }
-    }
-  }
-  .signature {
-    font-family: $font-2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.1rem;
-    font-size: 0.7rem;
-    padding-right: 20px;
-
-    p {
-      color: $opal;
-      &:hover {
-        color: $orange;
-        background: $charbon;
-      }
-    }
-  }
-  .login {
-    font-family: $font-2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-    color: $opal;
-    letter-spacing: 0.1rem;
-    margin-left: 6rem;
-    margin-right: 25%;
-    &:hover {
-      color: $orange;
-    }
-  }
+  display: flex;
+  width: fit-content;
+  @include verticalCenter;
+}
+.footer .social a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid $orange;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
+  color: $opal;
+}
+.footer a:hover {
+  opacity: 1;
+  color: $orange;
+}
+.footer a {
+  text-decoration: none;
+  opacity: 0.8;
+  color: $opal;
+}
+.footer .signature p {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 5px;
+  color: $opal;
+}
+.footer .login a {
+  margin-left: 5px;
+  margin-right: 5px;
+  border: 1px solid $orange;
+  border-radius: $borderRadius;
+  padding-right: 5px;
 }

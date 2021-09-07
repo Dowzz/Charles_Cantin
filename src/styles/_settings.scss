@@ -3,21 +3,24 @@ $font-1: "saira Stencil One", cursive;
 $font-2: "Orbitron", sans-serif;
 $font-3: "Righteous", cursive;
 
-$borderRadius: 25px;
-$shadow: 0 1px 3px #333;
-$minHeight: 95vh;
-
 $orange: #d16f2e;
 $charbon: #424651;
 $opal: #c5decd;
 $red: #960200;
 $onyx: #32373b;
 
+$borderRadius: 25px;
+$shadow: 0 2px 6px $charbon;
+$minHeight: 95vh;
+
+@mixin verticalCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 html {
   overflow: hidden;
-  background-color: grey;
-  min-height: 100vh;
-  background: url("../media/camera.jpg");
 }
 * {
   box-sizing: border-box;
@@ -25,16 +28,54 @@ html {
   padding: 0;
 }
 body {
+  overflow: hidden;
+  margin: 1rem auto;
   font-family: $font-1;
   color: $onyx;
+  background: url("../media/camera.jpg") no-repeat 0% 0% / cover;
+}
+button {
+  cursor: pointer;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: $onyx;
+  cursor: pointer;
+}
+a:visited {
+  color: $orange;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
 }
 .home,
-.gallery,
-.contact,
-.prestation {
+.knowledges,
+.portfolio,
+.contact {
   display: flex;
 
   @media screen and (max-width: 850px) {
     display: block !important;
+  }
+}
+.homeContent,
+.knwoledgesContent,
+.portfolioContent,
+.contactContent {
+  margin-left: 0.4rem;
+  @media screen and (max-width: 850px) {
+    margin-left: 0 !important;
   }
 }

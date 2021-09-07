@@ -1,121 +1,121 @@
 export const photoData=[
     {
-        id:(Math.random()),
+        id:1,
         name:'FromScratch',
         categorie:'Portrait',
         source:'./media/hong-kong.jpg',
         
     },
     {
-        id:(Math.random()),
+        id:2,
         name:'Dice Game',
         categorie:'Portrait',
-        source:'./media/hong-kong.jpg',
+        source:'./media/marriage.jpg',
         
     },
     {
-        id:(Math.random()),
+        id:3,
         name:'Fantasia',
         categorie:'Portrait',
-        source:'./media/hong-kong.jpg',
+        source:'./media/enfant.jpg',
         
     },
     {
-        id:(Math.random()),
+        id:4,
         name:'toto',
         categorie:'Mariage',
-        source:'./media/hong-kong.jpg',
+        source:'./media/macro.jpg',
         
     },
     {
-        id:(Math.random()),
+        id:5,
         name:'Bébé',
         categorie:'Portrait',
         source:'./media/hong-kong.jpg',
         
     },
     {
-        id:(Math.random()),
+        id:6,
         name:'Bébé',
         categorie:'Portrait',
-        source:'./media/hong-kong.jpg',
+        source:'./media/baby.jpg',
         
     },
     {
-        id:(Math.random()),
+        id:7,
         name:'Bébé',
         categorie:'Portrait',
-        source:'./media/hong-kong.jpg',
+        source:'./media/photographe.jpg',
         
     },
     {
-        id:(Math.random()),
+        id:8,
         name:'Bébé',
         categorie:'Portrait',
         source:'',
         
     },
     {
-        id:(Math.random()),
+        id:9,
         name:'Bébé',
         categorie:'Portrait',
         source:'',
         
     },
     {
-        id:(Math.random()),
+        id:10,
         name:'Bébé',
         categorie:'Portrait',
         source:'',
         
     },
     {
-        id:(Math.random()),
+        id:11,
         name:'Bébé',
         categorie:'Portrait',
         source:'',
         
     },
     {
-        id:(Math.random()),
+        id:12,
         name:'Bébé',
         categorie:'Portrait',
         source:'',
         
     },
     {
-        id:(Math.random()),
+        id:13,
         name:'Bébé',
         categorie:'Portrait',
         source:'',
         
     },
     {
-        id:(Math.random()),
+        id:14,
         name:'Bébé',
         categorie:'Portrait',
         source:'',
         
     },
     {
-        id:(Math.random()),
+        id:15,
         name:'Bébé',
         categorie:'Portrait',
         source:'',
         
     },
     {
-        id:(Math.random()),
+        id:16,
         name:'Bébé',
         categorie:'Portrait',
         source:'',
         
     },
     {
-        id:(Math.random()),
-        name:'Bébé',
+        id:17,
+        name:'elle est la ',
         categorie:'Portrait',
-        source:'',
+        source:'./media/photographe.jpg',
         
     },
 ]
