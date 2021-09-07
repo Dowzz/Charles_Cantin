@@ -30,29 +30,29 @@ export const photoData=[
     {
         id:5,
         name:'Bébé',
-        categorie:'Portrait',
+        categorie:'Bébé',
         source:'./media/hong-kong.jpg',
         
     },
     {
         id:6,
         name:'Bébé',
-        categorie:'Portrait',
+        categorie:'Baptème',
         source:'./media/baby.jpg',
         
     },
     {
         id:7,
         name:'Bébé',
-        categorie:'Portrait',
+        categorie:'Famille',
         source:'./media/photographe.jpg',
         
     },
     {
         id:8,
         name:'Bébé',
-        categorie:'Portrait',
-        source:'',
+        categorie:'Couple',
+        source:'./media/photographe.jpg',
         
     },
     {
@@ -113,7 +113,7 @@ export const photoData=[
     },
     {
         id:17,
-        name:'elle est la ',
+        name:'elle est la',
         categorie:'Portrait',
         source:'./media/photographe.jpg',
         

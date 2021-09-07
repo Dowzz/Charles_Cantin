@@ -127,7 +127,7 @@ body {
 }
 
 .navbar {
-  margin: 2rem 0 0 3rem;
+  margin: 3rem 0 0 3rem;
   position: fixed;
   left: 0;
   top: -2rem;
@@ -235,12 +235,103 @@ body {
   padding-right: 5px;
 }
 
+.radioDisplay {
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 95%;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+  background: #424651;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-box-shadow: 0 2px 6px #424651;
+          box-shadow: 0 2px 6px #424651;
+}
+
+.radioDisplay li {
+  color: #c5decd;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding: 0 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.radioDisplay li input[type="radio"] {
+  visibility: hidden;
+  position: relative;
+}
+
+.radioDisplay li input[type="radio"]:before {
+  content: "";
+  visibility: visible;
+  position: absolute;
+  top: -4px;
+  left: -12px;
+  height: 0.9rem;
+  width: 0.9rem;
+  border-radius: 50%;
+  border: 2px solid #c5decd;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.radioDisplay li input[type="radio"]:after {
+  content: "";
+  visibility: visible;
+  position: absolute;
+  top: -4px;
+  left: -12px;
+  height: 0.9rem;
+  width: 0.9rem;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: #d16f2e;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.radioDisplay li input:checked:after {
+  -webkit-transform: scale(1.17) translate(-25%, -25%);
+          transform: scale(1.17) translate(-25%, -25%);
+  top: 2px;
+  left: -6px;
+}
+
+.radioDisplay li input:checked + label {
+  color: #d16f2e;
+}
+
+.radioDisplay li label {
+  cursor: pointer;
+}
+
 .container-slider {
   border: 3px solid #32373b;
   border-radius: 25px;
   max-width: 1200px;
   height: 700px;
-  margin: 100px auto 0;
+  margin: 50px auto 0;
   position: relative;
   overflow: hidden;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -256,101 +347,17 @@ body {
 .slide {
   width: 100%;
   height: 100%;
-  position: absolute;
-  opacity: 0;
-  -webkit-transition: opacity ease-in-out 0.4s;
-  transition: opacity ease-in-out 0.4s;
 }
 
-.slide img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.active-anim {
-  opacity: 1;
-}
-
-.btn-slide {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #f1f1f1;
-  border: 1px solid rgba(34, 34, 34, 0.287);
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
-}
-
-.btn-slide img {
-  z-index: 1;
-  width: 25px;
-  height: 25px;
-  pointer-events: none;
-}
-
-.prev {
-  top: 50%;
-  left: 20px;
-  -webkit-transform: translateY(-60%);
-          transform: translateY(-60%);
-  background-color: #424651;
-}
-
-.next {
-  top: 50%;
-  right: 20px;
-  -webkit-transform: translateY(-60%);
-          transform: translateY(-60%);
-  background-color: #424651;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: #d16f2e;
-}
-
-.container-dots {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-}
-
-.dot {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  margin: 0 5px;
-  background: #32373b;
-}
-
-.dot.active {
-  background: #d16f2e;
-}
-
-.image-overlay {
+.image {
   position: relative;
 }
 
 img {
   -webkit-transition: 0.5 ease;
   transition: 0.5 ease;
+  width: 100%;
+  height: 100%;
 }
 
 .overlay {
@@ -361,7 +368,6 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
-  text-align: center;
 }
 
 .text {
