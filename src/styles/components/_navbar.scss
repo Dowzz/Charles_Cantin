@@ -2,7 +2,8 @@ body {
   min-height: 100vh;
 }
 .navbar {
-  margin: 3rem 0 0 3rem;
+  z-index: 1;
+  margin: 12rem 0 0 3rem;
   position: fixed;
   left: 0;
   top: -2rem;
@@ -24,7 +25,7 @@ body {
   }
   li a {
     margin-left: 10px;
-    font-size: 8rem;
+    font-size: 6rem;
     box-shadow: $shadow;
     line-height: 1.5;
     opacity: 0.6;

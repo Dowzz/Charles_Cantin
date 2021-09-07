@@ -106,8 +106,8 @@ export const photoData=[
     },
     {
         id:16,
-        name:'Bébé',
-        categorie:'Portrait',
+        name:'Mariage',
+        categorie:'Mariage',
         source:'',
         
     },

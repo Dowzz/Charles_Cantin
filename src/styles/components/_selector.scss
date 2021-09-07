@@ -107,6 +107,19 @@ img {
   opacity: 0;
   font-size: 2rem;
 }
+.btn-slide {
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  margin-left: 1rem;
+  margin-top: 0.2rem;
+  border-radius: $borderRadius;
+  background: $orange;
+  padding: 2px;
+}
 .container-slider:hover .text {
+  opacity: 1;
+}
+.container-slider:hover .btn-slide {
   opacity: 1;
 }

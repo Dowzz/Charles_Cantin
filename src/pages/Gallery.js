@@ -1,8 +1,9 @@
 import React from 'react';
+import Selector from'../component/Selector';
 import Footer from '../component/Footer';
 
 import Navbar from '../component/Navbar';
-import Selector from '../component/Selector';
+
 
 
 const Gallery = () => {
@@ -10,10 +11,8 @@ const Gallery = () => {
         <div>
            <Navbar/>
            <Selector/>
-           
            <Footer/>
         </div>
     );
 };
-
 export default Gallery;

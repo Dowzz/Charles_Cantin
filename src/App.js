@@ -20,7 +20,6 @@ function App() {
         <Route path="/Prestations" exact component={Prestation}/>
         <Route path="/Me_contacter" exact component={Contact}/>
         <Route component={NotFound} />
-
       </Switch>
     </BrowserRouter></>
     

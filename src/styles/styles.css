@@ -127,7 +127,8 @@ body {
 }
 
 .navbar {
-  margin: 3rem 0 0 3rem;
+  z-index: 1;
+  margin: 12rem 0 0 3rem;
   position: fixed;
   left: 0;
   top: -2rem;
@@ -160,7 +161,7 @@ body {
 
 .navbar li a {
   margin-left: 10px;
-  font-size: 8rem;
+  font-size: 6rem;
   -webkit-box-shadow: 0 2px 6px #424651;
           box-shadow: 0 2px 6px #424651;
   line-height: 1.5;
@@ -223,7 +224,7 @@ body {
 .footer .signature p {
   margin-left: 5px;
   margin-right: 5px;
-  padding: 5px;
+  padding: 10px;
   color: #c5decd;
 }
 
@@ -232,7 +233,7 @@ body {
   margin-right: 5px;
   border: 1px solid #d16f2e;
   border-radius: 25px;
-  padding-right: 5px;
+  padding: 10px;
 }
 
 .radioDisplay {
@@ -381,7 +382,22 @@ img {
   font-size: 2rem;
 }
 
+.btn-slide {
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  margin-left: 1rem;
+  margin-top: 0.2rem;
+  border-radius: 25px;
+  background: #d16f2e;
+  padding: 2px;
+}
+
 .container-slider:hover .text {
+  opacity: 1;
+}
+
+.container-slider:hover .btn-slide {
   opacity: 1;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import { photoData } from '../data/photoData'
 
 
-export default class Selector extends Component {
 
-    
+
+export default class Selector extends Component {
+        
     state ={
         photos:photoData,
         radios:[
@@ -23,6 +24,7 @@ export default class Selector extends Component {
         let radio= event.target.value;
         this.setState({selectedRadio : radio})
     }
+
     render() {
         let {photos, radios, selectedRadio} = this.state;
         return (
@@ -44,15 +46,14 @@ export default class Selector extends Component {
                             )
                         })
                     }
+                   
                 </ul>
-                
                 <div className="container-slider">                    
                     {
                         photos
                         .filter(item => item.categorie.includes(selectedRadio))
                         .map(item => {
-                            return (
-                                <>
+                            return ( 
                                 <div className="slide"
                                 key={item.id}
                                 >
@@ -63,10 +64,10 @@ export default class Selector extends Component {
                                     />
                                     <div className="overlay">
                                         <div className="text">{item.name}</div>
-                                    </div>
 
-                                </div>     
-                                </>
+                                    </div>
+                                           
+                                </div>
                             )
                         })
                     }
