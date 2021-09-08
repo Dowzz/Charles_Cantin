@@ -1,0 +1,31 @@
+.presta-content {
+  @include verticalCenter;
+  flex-direction: column;
+  height: 90vh;
+  width: 100%;
+  color: $orange;
+}
+.contenu {
+  box-shadow: $shadow2;
+  border-radius: $borderRadius;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  color: $opal;
+  .presta {
+    font-family: $font-3;
+    background: $charbon;
+    text-align: center;
+    border-radius: $borderRadius;
+    padding: 5px 5px;
+    color: $orange;
+  }
+  .description {
+    background: $onyx;
+    font-family: $font-3;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px;
+    border-radius: $borderRadius;
+  }
+}

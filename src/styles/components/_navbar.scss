@@ -5,7 +5,7 @@ body {
   border-radius: $borderRadius;
   width: 350px;
   z-index: 1;
-  margin: 5rem 0 0 3rem;
+  margin: 8rem 0 0 3rem;
   position: fixed;
   left: 0;
   top: -2rem;
@@ -25,7 +25,7 @@ body {
     transform: rotateY(3deg);
   }
   li a {
-    font-size: 8rem;
+    font-size: 7rem;
     box-shadow: $shadow;
     border-radius: $borderRadius;
     line-height: 1.5;

@@ -136,7 +136,7 @@ body {
   border-radius: 25px;
   width: 350px;
   z-index: 1;
-  margin: 5rem 0 0 3rem;
+  margin: 8rem 0 0 3rem;
   position: fixed;
   left: 0;
   top: -2rem;
@@ -167,7 +167,7 @@ body {
 }
 
 .navbar li a {
-  font-size: 8rem;
+  font-size: 7rem;
   -webkit-box-shadow: 0 2px 6px #424651;
           box-shadow: 0 2px 6px #424651;
   border-radius: 25px;
