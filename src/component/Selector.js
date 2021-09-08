@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
 import ScrollToTop from 'react-scroll-up';
 import { photoData } from '../data/photoData'
+import styled, { keyframes } from 'styled-components'
+import { fadeIn  } from 'react-animations'
 
 
+const fading = keyframes`${fadeIn}`;
 
+const Fadein= styled.div`
+animation:3s ${fading}`
 
 export default class Selector extends Component {
         
@@ -59,11 +64,12 @@ export default class Selector extends Component {
                     </div>
                 <div className="container-slider">                    
                     {
+                        
                         photos
                         .filter(item => item.categorie.includes(selectedRadio))
                         .map(item => {
                             return (
-                            
+                                <Fadein>
                                 <div className="slide"
                                 key={item.id}
                                 >
@@ -74,6 +80,7 @@ export default class Selector extends Component {
                                      <div className="text">{item.name}</div>
   
                                 </div>
+                                </Fadein>
                                 )
                             }   
                         )

@@ -5,10 +5,6 @@ export default class Footer extends Component {
         return (
             <div>
                 <div className="footer">
-                    <div className="social">
-                        <a href="/" target="__blank" rel="noopener noreferrer"><i className="fab fa-facebook"></i></a>
-                        <a href="/" target="__blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
-                    </div>
                     <div className="signature">
                     <p>Dowzz BY DOM2A-2021</p>
                     </div>
