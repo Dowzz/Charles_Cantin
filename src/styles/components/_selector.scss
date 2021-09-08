@@ -113,4 +113,9 @@ img {
   border-radius: $borderRadius;
 }
 @media screen and(max-width:1100px) {
+  .radioDisplay {
+    width: 100%;
+  }
+}
+@media screen and(max-width:1100px) {
 }

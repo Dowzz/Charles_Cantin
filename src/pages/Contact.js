@@ -5,6 +5,7 @@ import styled, { keyframes } from 'styled-components'
 import { zoomInDown } from 'react-animations'
 import CopyToClipboard from 'react-copy-to-clipboard';
 import $ from 'jquery'
+import Footer from '../component/Footer';
 
 const menuToggle =() =>{
    var menu= $(document.getElementsByClassName('hamburger'));
@@ -42,6 +43,7 @@ const Contact = () => {
                 </div>
                     </ZoomDiv>
                 </div>
+                <Footer/>
               
             </div>   
         </div>

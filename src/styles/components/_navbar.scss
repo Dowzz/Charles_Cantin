@@ -1,13 +1,10 @@
-body {
-  min-height: 100vh;
-}
 .navbar {
   font-family: $font-4;
   font-weight: 400;
   border-radius: $borderRadius;
   width: 350px;
   z-index: 1;
-  margin: 1rem 0 0 3rem;
+  margin-left: 2rem;
   position: fixed;
   left: 0;
   top: -2rem;
@@ -42,11 +39,37 @@ body {
 }
 .navbar .social {
   display: flex;
+
   font-size: 3rem;
   a {
     margin-right: 1rem;
   }
   a:hover {
     color: $opal;
+  }
+}
+.hamburger .navbar {
+  background: $onyx;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+  box-shadow: $shadow;
+  ul {
+    width: 100%;
+    perspective: inherit;
+    justify-content: center;
+  }
+  li {
+    transform: inherit;
+    a {
+      font-size: 4rem !important;
+      margin: 0;
+      padding: 10px;
+    }
+  }
+  .social {
+    justify-content: center;
   }
 }

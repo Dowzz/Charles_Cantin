@@ -18,8 +18,10 @@ const Gallery = () => {
            <button className="responsive" onClick={menuToggle}><i className="fas fa-bars"></i></button>
             <div className="hamburger"><Navbar/></div>
             <div className="default"><Navbar/></div>
+            <div className="content">
            <Selector/>
            <Footer/>
+            </div>
         </div>
     );
 };

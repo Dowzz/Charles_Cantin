@@ -55,7 +55,8 @@ export default class Selector extends Component {
                    
                 </ul>
                     <div>
-                        <ScrollToTop 
+                        <ScrollToTop
+                        
                         showUnder={100}
                         duration= {1000}
                         >
@@ -69,7 +70,7 @@ export default class Selector extends Component {
                         .filter(item => item.categorie.includes(selectedRadio))
                         .map(item => {
                             return (
-                                <Fadein  key={item.id}>
+                                <Fadein key={item.id}  >
                                 <div className="slide"
                                 key={item.id}
                                 >

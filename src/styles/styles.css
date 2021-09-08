@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Allison&family=Architects+Daughter&family=Dancing+Script&family=Ma+Shan+Zheng&display=swap");
 html {
-  overflow-x: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 * {
@@ -11,12 +12,11 @@ html {
 }
 
 body {
-  max-width: 1200px;
   overflow-x: hidden;
-  margin: 1rem auto;
+  margin-left: 25rem;
   font-family: "Allison", cursive;
-  color: #32373b;
   background: url("../media/camera.jpg");
+  background-size: 100%;
 }
 
 button {
@@ -54,40 +54,9 @@ button {
   border-radius: 25px;
   font-size: 1.5rem;
   position: fixed;
-  top: 4.5rem;
-  left: 0.5rem;
+  top: 5.1rem;
+  left: 0.9rem;
   display: none;
-}
-
-.hamburger .navbar {
-  background: #32373b;
-  width: 100%;
-  margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 10px;
-  margin-top: 10rem;
-  -webkit-box-shadow: 0 2px 6px #424651;
-          box-shadow: 0 2px 6px #424651;
-}
-
-.hamburger .navbar ul {
-  width: 50%;
-  -webkit-perspective: inherit;
-          perspective: inherit;
-}
-
-.hamburger .navbar li {
-  -webkit-transform: inherit;
-          transform: inherit;
-}
-
-.hamburger .navbar li a {
-  font-size: 4rem !important;
 }
 
 @media screen and (max-width: 1100px) {
@@ -100,10 +69,6 @@ button {
   button {
     display: block;
   }
-}
-
-body {
-  margin-left: 25rem;
 }
 
 .home {
@@ -140,18 +105,22 @@ body {
 
 @media screen and (max-width: 800px) {
   .title {
+    font-size: 5rem;
+    letter-spacing: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .title {
     font-size: 4rem;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 460px) {
   .title {
-    font-size: 2rem !important;
+    font-size: 3rem;
+    letter-spacing: 0.4;
   }
-}
-
-body {
-  min-height: 100vh;
 }
 
 .navbar {
@@ -160,7 +129,7 @@ body {
   border-radius: 25px;
   width: 350px;
   z-index: 1;
-  margin: 1rem 0 0 3rem;
+  margin-left: 2rem;
   position: fixed;
   left: 0;
   top: -2rem;
@@ -219,6 +188,47 @@ body {
 
 .navbar .social a:hover {
   color: #c5decd;
+}
+
+.hamburger .navbar {
+  background: #32373b;
+  width: 100%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10rem;
+  -webkit-box-shadow: 0 2px 6px #424651;
+          box-shadow: 0 2px 6px #424651;
+}
+
+.hamburger .navbar ul {
+  width: 100%;
+  -webkit-perspective: inherit;
+          perspective: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hamburger .navbar li {
+  -webkit-transform: inherit;
+          transform: inherit;
+}
+
+.hamburger .navbar li a {
+  font-size: 4rem !important;
+  margin: 0;
+  padding: 10px;
+}
+
+.hamburger .navbar .social {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer {
@@ -451,6 +461,12 @@ img {
   width: 100%;
   height: 100%;
   border-radius: 25px;
+}
+
+@media screen and (max-width: 1100px) {
+  .radioDisplay {
+    width: 100%;
+  }
 }
 
 .presta-content {

@@ -22,7 +22,8 @@ $minHeight: 95vh;
 }
 
 html {
-  overflow-x: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 * {
   box-sizing: border-box;
@@ -30,12 +31,11 @@ html {
   padding: 0;
 }
 body {
-  max-width: 1200px;
   overflow-x: hidden;
-  margin: 1rem auto;
+  margin-left: 25rem;
   font-family: $font-1;
-  color: $onyx;
   background: url("../media/camera.jpg");
+  background-size: 100%;
 }
 button {
   cursor: pointer;
@@ -66,30 +66,11 @@ button {
   border-radius: $borderRadius;
   font-size: 1.5rem;
   position: fixed;
-  top: 4.5rem;
-  left: 0.5rem;
+  top: 5.1rem;
+  left: 0.9rem;
   display: none;
 }
-.hamburger .navbar {
-  background: $onyx;
-  width: 100%;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  margin-top: 10rem;
-  box-shadow: $shadow;
-  ul {
-    width: 50%;
-    perspective: inherit;
-  }
-  li {
-    transform: inherit;
-    a {
-      font-size: 4rem !important;
-    }
-  }
-}
+
 @media screen and(max-width:1100px) {
   body {
     margin-left: 0 !important;
