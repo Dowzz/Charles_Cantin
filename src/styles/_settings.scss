@@ -20,10 +20,8 @@ $minHeight: 95vh;
   justify-content: center;
   align-items: center;
 }
-
-html {
-  overflow-y: scroll;
-  overflow-x: hidden;
+::-webkit-scrollbar {
+  width: 0px;
 }
 * {
   box-sizing: border-box;
@@ -31,7 +29,6 @@ html {
   padding: 0;
 }
 body {
-  overflow-x: hidden;
   margin-left: 25rem;
   font-family: $font-1;
   background: url("../media/camera.jpg");
@@ -54,10 +51,7 @@ a:visited {
 .hamburger {
   display: none;
 }
-button {
-  display: none;
-}
-button {
+.responsive {
   z-index: 2;
   background: $charbon;
   color: $orange;
@@ -66,19 +60,19 @@ button {
   border-radius: $borderRadius;
   font-size: 1.5rem;
   position: fixed;
-  top: 5.1rem;
-  left: 0.9rem;
+  top: 0;
+  left: 0;
   display: none;
 }
 
 @media screen and(max-width:1100px) {
+  .responsive {
+    display: block;
+  }
   body {
     margin-left: 0 !important;
   }
   .default {
     display: none;
-  }
-  button {
-    display: block;
   }
 }

@@ -1,97 +1,109 @@
-.selector button {
-  z-index: 5;
-  width: 35px;
-  height: 30px;
-  background: $charbon;
-  :hover {
-    background: $onyx;
+.selector {
+  width: 99%;
+
+  .scrollup button {
+    z-index: 5;
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    width: 35px;
+    height: 35px;
+    background: $charbon;
+    fill: $orange;
+    border-radius: 50%;
+    box-shadow: $shadow;
   }
-}
-.scrollup:hover {
-  fill: $orange;
-}
+  .selection {
+    background: $charbon;
+    font-family: $font-2;
+    color: $orange;
+    text-align: center;
+    justify-content: center;
+    border-radius: $borderRadius;
+    width: 100%;
+    display: none;
+  }
+  .radioDisplay {
+    width: 99%;
 
-.radioDisplay {
-  font-family: $font-2;
-  z-index: 1;
-  border-radius: $borderRadius;
-  display: flex;
-  width: 75%;
-  padding: 1rem 2rem;
-  margin: 0 auto;
-  background: $charbon;
-  user-select: none;
-  box-shadow: $shadow;
-  position: fixed;
-  top: 0;
+    .categorie {
+      background: $charbon;
+      border-radius: $borderRadius;
+      display: flex;
+      font-family: $font-2;
+      font-weight: 600;
+      justify-content: center;
 
-  li {
-    color: $opal;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    padding: 0 1rem;
-    flex: 1;
-    z-index: 2;
-    @include verticalCenter;
-
-    input[type="radio"] {
-      visibility: hidden;
-      position: relative;
-
-      &:before {
-        content: "";
-        visibility: visible;
-        position: absolute;
-        top: -4px;
-        left: -12px;
-        height: 0.9rem;
-        width: 0.9rem;
-        border-radius: 50%;
-        border: 2px solid $opal;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-      &:after {
-        content: "";
-        visibility: visible;
-        position: absolute;
-        top: -4px;
-        left: -12px;
-        height: 0.9rem;
-        width: 0.9rem;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: 0.3s;
-        background: $orange;
-        transform: scale(0);
-        transform-origin: center;
-      }
-    }
-    input:checked:after {
-      transform: scale(1.1) translate(-25%, -25%);
-      top: 2px;
-      left: -6px;
-    }
-    input:checked + label {
       color: $orange;
-    }
-    label {
-      cursor: pointer;
+      li {
+        color: $opal;
+        text-transform: uppercase;
+        margin-right: 5px;
+        z-index: 2;
+        font-size: 1rem;
+        @include verticalCenter;
+
+        input[type="radio"] {
+          visibility: hidden;
+          position: relative;
+          &:before {
+            content: "";
+            visibility: visible;
+            position: absolute;
+            top: -4px;
+            left: -12px;
+            height: 0.9rem;
+            width: 0.9rem;
+            border-radius: 50%;
+            border: 2px solid $orange;
+            cursor: pointer;
+            transition: 0.3s;
+          }
+          &:after {
+            content: "";
+            visibility: visible;
+            position: absolute;
+            top: -4px;
+            left: -12px;
+            height: 0.9rem;
+            width: 0.9rem;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.3s;
+            background: $orange;
+            transform: scale(0);
+            transform-origin: center;
+          }
+        }
+        input:checked:after {
+          transform: scale(1.17) translate(-25%, -25%);
+          top: 2px;
+          left: -6px;
+        }
+        input:checked + label {
+          color: $orange;
+        }
+        label {
+          cursor: pointer;
+        }
+      }
     }
   }
 }
+
 .container-slider {
+  overflow-y: auto;
+  margin-top: 4rem;
   z-index: -1;
-  width: 1000px;
-  max-width: 100%;
+  width: 100%;
   height: 100%;
-  margin: 4rem auto 0;
   position: relative;
 }
 
 .slide {
   margin-bottom: 10px;
   .text {
+    margin: auto;
     font-family: $font-2;
     display: flex;
     justify-content: center;
@@ -100,7 +112,7 @@
     border-radius: $borderRadius;
     color: $orange;
     font-size: 2rem;
-    top: -60px;
+    top: -50px;
     filter: opacity(80%);
   }
 }
@@ -108,14 +120,34 @@ img {
   box-shadow: $shadow;
   border: 3px solid $onyx;
   border-radius: $borderRadius;
-  width: 100%;
-  height: 100%;
+  width: 99%;
+  height: 99%;
   border-radius: $borderRadius;
 }
-@media screen and(max-width:1100px) {
-  .radioDisplay {
-    width: 100%;
+@media screen and(max-width:1250px) {
+  .categorie {
+    li {
+      font-size: 0.8rem !important;
+    }
   }
 }
-@media screen and(max-width:1100px) {
+@media screen and(max-width:1120px) {
+  .radioDisplay input {
+    display: none;
+  }
+}
+@media screen and(max-width:550px) {
+  .radioDisplay {
+    display: none;
+  }
+  .selection {
+    display: flex !important;
+  }
+  .categorie {
+    display: block !important;
+    width: 100%;
+  }
+  .content {
+    margin-top: 4rem;
+  }
 }

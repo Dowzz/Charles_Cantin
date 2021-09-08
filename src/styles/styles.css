@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Allison&family=Architects+Daughter&family=Dancing+Script&family=Ma+Shan+Zheng&display=swap");
-html {
-  overflow-y: scroll;
-  overflow-x: hidden;
+::-webkit-scrollbar {
+  width: 0px;
 }
 
 * {
@@ -12,7 +11,6 @@ html {
 }
 
 body {
-  overflow-x: hidden;
   margin-left: 25rem;
   font-family: "Allison", cursive;
   background: url("../media/camera.jpg");
@@ -41,11 +39,7 @@ a:visited {
   display: none;
 }
 
-button {
-  display: none;
-}
-
-button {
+.responsive {
   z-index: 2;
   background: #424651;
   color: #d16f2e;
@@ -54,20 +48,20 @@ button {
   border-radius: 25px;
   font-size: 1.5rem;
   position: fixed;
-  top: 5.1rem;
-  left: 0.9rem;
+  top: 0;
+  left: 0;
   display: none;
 }
 
 @media screen and (max-width: 1100px) {
+  .responsive {
+    display: block;
+  }
   body {
     margin-left: 0 !important;
   }
   .default {
     display: none;
-  }
-  button {
-    display: block;
   }
 }
 
@@ -152,6 +146,7 @@ button {
           transform-origin: left;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  text-align: center;
 }
 
 .navbar li:hover {
@@ -191,6 +186,7 @@ button {
 }
 
 .hamburger .navbar {
+  overflow-y: scroll;
   background: #32373b;
   width: 100%;
   margin: 0;
@@ -220,7 +216,8 @@ button {
 }
 
 .hamburger .navbar li a {
-  font-size: 4rem !important;
+  text-align: center;
+  font-size: 1.5rem !important;
   margin: 0;
   padding: 10px;
 }
@@ -312,51 +309,61 @@ button {
   }
 }
 
-.selector button {
+.selector {
+  width: 99%;
+}
+
+.selector .scrollup button {
   z-index: 5;
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
   width: 35px;
-  height: 30px;
+  height: 35px;
   background: #424651;
-}
-
-.selector button :hover {
-  background: #32373b;
-}
-
-.scrollup:hover {
   fill: #d16f2e;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 6px #424651;
+          box-shadow: 0 2px 6px #424651;
 }
 
-.radioDisplay {
+.selector .selection {
+  background: #424651;
   font-family: "Architects Daughter", cursive;
-  z-index: 1;
+  color: #d16f2e;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 25px;
+  width: 100%;
+  display: none;
+}
+
+.selector .radioDisplay {
+  width: 99%;
+}
+
+.selector .radioDisplay .categorie {
+  background: #424651;
   border-radius: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 75%;
-  padding: 1rem 2rem;
-  margin: 0 auto;
-  background: #424651;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  -webkit-box-shadow: 0 2px 6px #424651;
-          box-shadow: 0 2px 6px #424651;
-  position: fixed;
-  top: 0;
+  font-family: "Architects Daughter", cursive;
+  font-weight: 600;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #d16f2e;
 }
 
-.radioDisplay li {
+.selector .radioDisplay .categorie li {
   color: #c5decd;
-  font-size: 1.1rem;
   text-transform: uppercase;
-  padding: 0 1rem;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  margin-right: 5px;
   z-index: 2;
+  font-size: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -368,12 +375,12 @@ button {
           align-items: center;
 }
 
-.radioDisplay li input[type="radio"] {
+.selector .radioDisplay .categorie li input[type="radio"] {
   visibility: hidden;
   position: relative;
 }
 
-.radioDisplay li input[type="radio"]:before {
+.selector .radioDisplay .categorie li input[type="radio"]:before {
   content: "";
   visibility: visible;
   position: absolute;
@@ -382,13 +389,13 @@ button {
   height: 0.9rem;
   width: 0.9rem;
   border-radius: 50%;
-  border: 2px solid #c5decd;
+  border: 2px solid #d16f2e;
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.radioDisplay li input[type="radio"]:after {
+.selector .radioDisplay .categorie li input[type="radio"]:after {
   content: "";
   visibility: visible;
   position: absolute;
@@ -407,27 +414,27 @@ button {
           transform-origin: center;
 }
 
-.radioDisplay li input:checked:after {
-  -webkit-transform: scale(1.1) translate(-25%, -25%);
-          transform: scale(1.1) translate(-25%, -25%);
+.selector .radioDisplay .categorie li input:checked:after {
+  -webkit-transform: scale(1.17) translate(-25%, -25%);
+          transform: scale(1.17) translate(-25%, -25%);
   top: 2px;
   left: -6px;
 }
 
-.radioDisplay li input:checked + label {
+.selector .radioDisplay .categorie li input:checked + label {
   color: #d16f2e;
 }
 
-.radioDisplay li label {
+.selector .radioDisplay .categorie li label {
   cursor: pointer;
 }
 
 .container-slider {
+  overflow-y: auto;
+  margin-top: 4rem;
   z-index: -1;
-  width: 1000px;
-  max-width: 100%;
+  width: 100%;
   height: 100%;
-  margin: 4rem auto 0;
   position: relative;
 }
 
@@ -436,6 +443,7 @@ button {
 }
 
 .slide .text {
+  margin: auto;
   font-family: "Architects Daughter", cursive;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -448,7 +456,7 @@ button {
   border-radius: 25px;
   color: #d16f2e;
   font-size: 2rem;
-  top: -60px;
+  top: -50px;
   -webkit-filter: opacity(80%);
           filter: opacity(80%);
 }
@@ -458,14 +466,38 @@ img {
           box-shadow: 0 2px 6px #424651;
   border: 3px solid #32373b;
   border-radius: 25px;
-  width: 100%;
-  height: 100%;
+  width: 99%;
+  height: 99%;
   border-radius: 25px;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1250px) {
+  .categorie li {
+    font-size: 0.8rem !important;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .radioDisplay input {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
   .radioDisplay {
+    display: none;
+  }
+  .selection {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  .categorie {
+    display: block !important;
     width: 100%;
+  }
+  .content {
+    margin-top: 4rem;
   }
 }
 
@@ -483,7 +515,7 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
+  height: 150vh;
   width: 100%;
   color: #d16f2e;
 }
@@ -491,12 +523,7 @@ img {
 .titre {
   text-align: center;
   color: transparent;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-size: 8rem;
-  line-height: 2;
+  font-size: 6rem;
   letter-spacing: 0.5rem;
   background: url(https://media.giphy.com/media/fnJWA6rIGgYmlksSEN/giphy.gif) center/cover;
   background-clip: text;
@@ -505,7 +532,7 @@ img {
 }
 
 .contenu {
-  overflow-x: scroll;
+  overflow-y: scroll;
   -webkit-box-shadow: 0 5px 5px #32373b;
           box-shadow: 0 5px 5px #32373b;
   border-radius: 25px;
@@ -538,6 +565,27 @@ img {
   margin: 10px 10px 10px 10px;
   padding: 10px 10px;
   border-radius: 25px;
+}
+
+@media screen and (max-width: 1100px) {
+  .titre {
+    font-size: 4rem;
+  }
+  .description {
+    margin: 5px 5px 5px 5px !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .contenu {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .titre {
+    font-size: 3rem;
+  }
 }
 
 label {
@@ -664,7 +712,7 @@ label {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
+  height: 120vh;
   width: 100%;
   color: #d16f2e;
 }
@@ -694,7 +742,7 @@ label {
   vertical-align: middle;
 }
 
-.contenu {
+.contact-content .contenu {
   overflow-x: scroll;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -710,8 +758,6 @@ label {
   -webkit-box-shadow: 0 2px 6px #424651;
           box-shadow: 0 2px 6px #424651;
   width: 50%;
-  min-width: 500px;
-  min-height: 750px;
 }
 
 .adress,

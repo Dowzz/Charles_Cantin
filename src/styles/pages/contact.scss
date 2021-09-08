@@ -52,7 +52,7 @@ label {
 .contact-content {
   @include verticalCenter;
   flex-direction: column;
-  height: 100vh;
+  height: 120vh;
   width: 100%;
   color: $orange;
   input {
@@ -78,20 +78,19 @@ label {
     color: $orange;
     vertical-align: middle;
   }
+  .contenu {
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+    border-radius: $borderRadius;
+    box-shadow: $shadow;
+    width: 50%;
+  }
 }
-.contenu {
-  overflow-x: scroll;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin: 5px;
-  padding: 10px;
-  border-radius: $borderRadius;
-  box-shadow: $shadow;
-  width: 50%;
-  min-width: 500px;
-  min-height: 750px;
-}
+
 .adress,
 .phone {
   border-radius: $borderRadius;
@@ -120,4 +119,7 @@ label {
   padding: 10px;
   color: $onyx;
   font-family: font-2;
+}
+
+@media screen and(max-width:500px) {
 }

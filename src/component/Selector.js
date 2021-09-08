@@ -3,7 +3,12 @@ import ScrollToTop from 'react-scroll-up';
 import { photoData } from '../data/photoData'
 import styled, { keyframes } from 'styled-components'
 import { fadeIn  } from 'react-animations'
+import $ from 'jquery'
 
+const menuToggle =() =>{
+   var menu= $(document.getElementsByClassName('radioDisplay'));
+   menu.fadeToggle();
+}
 
 const fading = keyframes`${fadeIn}`;
 
@@ -35,7 +40,9 @@ export default class Selector extends Component {
         let {photos, radios, selectedRadio} = this.state;
         return (
             <div className="selector">
-                <ul className="radioDisplay">
+                 <h3 className="selection" onClick={menuToggle}>Filtre</h3>
+                 <div className="radioDisplay">
+                <ul className="categorie">
                     {
                         radios.map((radio) =>{
                             return(
@@ -54,13 +61,14 @@ export default class Selector extends Component {
                     }
                    
                 </ul>
-                    <div>
+                </div>
+                    <div className="scrollup">
                         <ScrollToTop
                         
                         showUnder={100}
                         duration= {1000}
                         >
-                            <button><svg className="scrollup" width="30" height="30" viewBox="0 0 2048 2048" xmlns="http://www.w3.org/2000/svg"><path d="M1523 1440q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23zm0-384q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"/></svg></button>
+                            <button><svg width="30" height="30" viewBox="0 0 2048 2048" xmlns="http://www.w3.org/2000/svg"><path d="M1523 1440q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23zm0-384q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"/></svg></button>
                         </ScrollToTop>
                     </div>
                 <div className="container-slider">                    
