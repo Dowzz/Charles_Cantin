@@ -12,6 +12,7 @@
 }
 
 .radioDisplay {
+  font-family: $font-2;
   z-index: 1;
   border-radius: $borderRadius;
   display: flex;
@@ -95,6 +96,7 @@
 .slide {
   margin-bottom: 10px;
   .text {
+    font-family: $font-2;
     display: flex;
     justify-content: center;
     position: relative;

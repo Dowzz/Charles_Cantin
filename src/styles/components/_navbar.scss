@@ -2,6 +2,8 @@ body {
   min-height: 100vh;
 }
 .navbar {
+  font-family: $font-4;
+  font-weight: 400;
   border-radius: $borderRadius;
   width: 350px;
   z-index: 1;

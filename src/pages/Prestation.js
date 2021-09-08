@@ -15,7 +15,7 @@ export default class Prestation extends Component {
             <div>
                 <Navbar/>
                 <div className="presta-content">
-                <h3 className='title'>Prestations et Tarifs</h3>
+                <h3 className='titre'>Prestations et Tarifs</h3>
                     <div className="contenu">
                     <ZoomDiv>
                         <h2 className="presta">« Famille » 220 euros</h2>

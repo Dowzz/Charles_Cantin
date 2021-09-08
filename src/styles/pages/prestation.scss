@@ -5,6 +5,21 @@
   width: 100%;
   color: $orange;
 }
+.titre {
+  text-align: center;
+
+  color: transparent;
+  flex-direction: column;
+
+  font-size: 8rem;
+  line-height: 2;
+  letter-spacing: 0.5rem;
+  background: url(https://media.giphy.com/media/fnJWA6rIGgYmlksSEN/giphy.gif)
+    center/cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+}
 .contenu {
   box-shadow: $shadow2;
   border-radius: $borderRadius;
@@ -14,7 +29,7 @@
   justify-content: center;
   color: $opal;
   .presta {
-    font-family: $font-3;
+    font-family: $font-2;
     background: $charbon;
     text-align: center;
     border-radius: $borderRadius;
@@ -23,7 +38,7 @@
   }
   .description {
     background: $onyx;
-    font-family: $font-3;
+    font-family: $font-2;
     margin: 10px 10px 10px 10px;
     padding: 10px 10px;
     border-radius: $borderRadius;
