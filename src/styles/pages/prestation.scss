@@ -1,7 +1,7 @@
 .presta-content {
   @include verticalCenter;
   flex-direction: column;
-  height: 90vh;
+  height: 100vh;
   width: 100%;
   color: $orange;
 }
@@ -21,6 +21,7 @@
   -moz-background-clip: text;
 }
 .contenu {
+  overflow-x: scroll;
   box-shadow: $shadow2;
   border-radius: $borderRadius;
   display: flex;

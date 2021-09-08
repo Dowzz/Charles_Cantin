@@ -69,7 +69,7 @@ export default class Selector extends Component {
                         .filter(item => item.categorie.includes(selectedRadio))
                         .map(item => {
                             return (
-                                <Fadein>
+                                <Fadein  key={item.id}>
                                 <div className="slide"
                                 key={item.id}
                                 >

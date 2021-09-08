@@ -47,3 +47,14 @@
   border-radius: $borderRadius;
   padding: 10px;
 }
+@media screen and(max-width:1100px) {
+  .home {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .footer {
+    position: fixed;
+    width: 100%;
+  }
+}

@@ -1,11 +1,22 @@
 import React from 'react';
 import Footer from '../component/Footer';
 import Navbar from '../component/Navbar';
+import $ from 'jquery'
+
+const menuToggle =() =>{
+   var menu= $(document.getElementsByClassName('hamburger'));
+   menu.fadeToggle();
+    
+
+}
 
 const Home = () => {
+
     return (
         <div className="home">
-            <Navbar/>
+            <button className="responsive" onClick={menuToggle}><i className="fas fa-bars"></i></button>
+            <div className="hamburger"><Navbar/></div>
+            <div className="default"><Navbar/></div>
             <div className="homeContent">
                 <div className="content">
                     <h1 className="title">Charles Cantin 

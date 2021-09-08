@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap&family=Orbitron&family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allison&family=Architects+Daughter&family=Dancing+Script&family=Ma+Shan+Zheng&display=swap");
 html {
-  overflow-x: hidden;
+  overflow-x: scroll;
 }
 
 * {
@@ -14,9 +14,9 @@ body {
   max-width: 1200px;
   overflow-x: hidden;
   margin: 1rem auto;
-  font-family: "saira Stencil One", cursive;
+  font-family: "Allison", cursive;
   color: #32373b;
-  background: url("../media/camera.jpg") no-repeat 0% 0%/cover;
+  background: url("../media/camera.jpg");
 }
 
 button {
@@ -37,59 +37,69 @@ a:visited {
   color: #d16f2e;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
+.hamburger {
+  display: none;
 }
 
-::-webkit-scrollbar-track {
-  background: transparent;
+button {
+  display: none;
 }
 
-::-webkit-scrollbar-thumb {
-  background: transparent;
+button {
+  z-index: 2;
+  background: #424651;
+  color: #d16f2e;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 25px;
+  font-size: 1.5rem;
+  position: fixed;
+  top: 4.5rem;
+  left: 0.5rem;
+  display: none;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: transparent;
-}
-
-.home,
-.knowledges,
-.portfolio,
-.contact {
+.hamburger .navbar {
+  background: #32373b;
+  width: 100%;
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  margin-top: 10rem;
+  -webkit-box-shadow: 0 2px 6px #424651;
+          box-shadow: 0 2px 6px #424651;
 }
 
-@media screen and (max-width: 850px) {
-  .home,
-  .knowledges,
-  .portfolio,
-  .contact {
-    display: block !important;
-  }
+.hamburger .navbar ul {
+  width: 50%;
+  -webkit-perspective: inherit;
+          perspective: inherit;
 }
 
-.homeContent,
-.knwoledgesContent,
-.portfolioContent,
-.contactContent {
-  margin-left: 0.4rem;
+.hamburger .navbar li {
+  -webkit-transform: inherit;
+          transform: inherit;
 }
 
-@media screen and (max-width: 850px) {
-  .homeContent,
-  .knwoledgesContent,
-  .portfolioContent,
-  .contactContent {
+.hamburger .navbar li a {
+  font-size: 4rem !important;
+}
+
+@media screen and (max-width: 1100px) {
+  body {
     margin-left: 0 !important;
   }
-}
-
-::-webkit-scrollbar {
-  width: 0px;
-  height: 0px;
+  .default {
+    display: none;
+  }
+  button {
+    display: block;
+  }
 }
 
 body {
@@ -107,12 +117,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 90vh;
+  height: 100vh;
 }
 
 .title {
   text-align: center;
-  font-family: "saira Stencil One", cursive;
+  font-family: "Ma Shan Zheng", cursive;
   color: transparent;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -120,12 +130,24 @@ body {
           flex-direction: column;
   text-transform: uppercase;
   font-size: 6rem;
-  line-height: 0.95;
-  letter-spacing: 0.5rem;
-  background: url(https://media.giphy.com/media/NXEuPHCOiJujANVznL/giphy.gif) center/cover;
+  line-height: 2;
+  letter-spacing: 0.8rem;
+  background: url(https://media.giphy.com/media/lntLuFt5WG3tvtqK7B/giphy.gif) center/cover;
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
+}
+
+@media screen and (max-width: 800px) {
+  .title {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 2rem !important;
+  }
 }
 
 body {
@@ -133,10 +155,12 @@ body {
 }
 
 .navbar {
+  font-family: "Ma Shan Zheng", cursive;
+  font-weight: 400;
   border-radius: 25px;
   width: 350px;
   z-index: 1;
-  margin: 8rem 0 0 3rem;
+  margin: 1rem 0 0 3rem;
   position: fixed;
   left: 0;
   top: -2rem;
@@ -179,9 +203,26 @@ body {
 .navbar li a.active,
 .navbar li a:hover {
   opacity: 1;
+  color: #c5decd;
+}
+
+.navbar .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 3rem;
+}
+
+.navbar .social a {
+  margin-right: 1rem;
+}
+
+.navbar .social a:hover {
+  color: #c5decd;
 }
 
 .footer {
+  font-family: "Architects Daughter", cursive;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -245,7 +286,39 @@ body {
   padding: 10px;
 }
 
+@media screen and (max-width: 1100px) {
+  .home {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .footer {
+    position: fixed;
+    width: 100%;
+  }
+}
+
+.selector button {
+  z-index: 5;
+  width: 35px;
+  height: 30px;
+  background: #424651;
+}
+
+.selector button :hover {
+  background: #32373b;
+}
+
+.scrollup:hover {
+  fill: #d16f2e;
+}
+
 .radioDisplay {
+  font-family: "Architects Daughter", cursive;
   z-index: 1;
   border-radius: 25px;
   display: -webkit-box;
@@ -340,6 +413,7 @@ body {
 }
 
 .container-slider {
+  z-index: -1;
   width: 1000px;
   max-width: 100%;
   height: 100%;
@@ -347,17 +421,12 @@ body {
   position: relative;
 }
 
-@media screen and (max-width: 700px) {
-  .container-slider {
-    margin: 100px 10px 0;
-  }
-}
-
 .slide {
   margin-bottom: 10px;
 }
 
 .slide .text {
+  font-family: "Architects Daughter", cursive;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -382,5 +451,280 @@ img {
   width: 100%;
   height: 100%;
   border-radius: 25px;
+}
+
+.presta-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  color: #d16f2e;
+}
+
+.titre {
+  text-align: center;
+  color: transparent;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 8rem;
+  line-height: 2;
+  letter-spacing: 0.5rem;
+  background: url(https://media.giphy.com/media/fnJWA6rIGgYmlksSEN/giphy.gif) center/cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+}
+
+.contenu {
+  overflow-x: scroll;
+  -webkit-box-shadow: 0 5px 5px #32373b;
+          box-shadow: 0 5px 5px #32373b;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #c5decd;
+}
+
+.contenu .presta {
+  font-family: "Architects Daughter", cursive;
+  background: #424651;
+  text-align: center;
+  border-radius: 25px;
+  padding: 5px 5px;
+  color: #d16f2e;
+}
+
+.contenu .description {
+  background: #32373b;
+  font-family: "Architects Daughter", cursive;
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px;
+  border-radius: 25px;
+}
+
+label {
+  border-radius: 25px;
+  padding: 10px;
+}
+
+#not-mail {
+  display: none;
+  text-align: center;
+  background: #32373b;
+  color: #d16f2e;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  font-family: "Architects Daughter", cursive;
+  margin-bottom: 20px;
+}
+
+@-webkit-keyframes dongle {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  10% {
+    -webkit-transform: translate(-10px, 0px);
+            transform: translate(-10px, 0px);
+  }
+  20% {
+    -webkit-transform: translate(10px, 0px);
+            transform: translate(10px, 0px);
+  }
+  30% {
+    -webkit-transform: translate(-10px, 0px);
+            transform: translate(-10px, 0px);
+  }
+  40% {
+    -webkit-transform: translate(10px, 0px);
+            transform: translate(10px, 0px);
+  }
+  50% {
+    -webkit-transform: translate(-10px, 0px);
+            transform: translate(-10px, 0px);
+  }
+  60% {
+    -webkit-transform: translate(10px, 0px);
+            transform: translate(10px, 0px);
+  }
+  70% {
+    -webkit-transform: translate(-10px, 0px);
+            transform: translate(-10px, 0px);
+  }
+  80% {
+    -webkit-transform: translate(10px, 0px);
+            transform: translate(10px, 0px);
+  }
+  90% {
+    -webkit-transform: translate(-10px, 0px);
+            transform: translate(-10px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+
+@keyframes dongle {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  10% {
+    -webkit-transform: translate(-10px, 0px);
+            transform: translate(-10px, 0px);
+  }
+  20% {
+    -webkit-transform: translate(10px, 0px);
+            transform: translate(10px, 0px);
+  }
+  30% {
+    -webkit-transform: translate(-10px, 0px);
+            transform: translate(-10px, 0px);
+  }
+  40% {
+    -webkit-transform: translate(10px, 0px);
+            transform: translate(10px, 0px);
+  }
+  50% {
+    -webkit-transform: translate(-10px, 0px);
+            transform: translate(-10px, 0px);
+  }
+  60% {
+    -webkit-transform: translate(10px, 0px);
+            transform: translate(10px, 0px);
+  }
+  70% {
+    -webkit-transform: translate(-10px, 0px);
+            transform: translate(-10px, 0px);
+  }
+  80% {
+    -webkit-transform: translate(10px, 0px);
+            transform: translate(10px, 0px);
+  }
+  90% {
+    -webkit-transform: translate(-10px, 0px);
+            transform: translate(-10px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+
+.contact-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  color: #d16f2e;
+}
+
+.contact-content input {
+  width: 80%;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 1rem;
+  background: #c5decd;
+  padding: 15px;
+}
+
+.contact-content textarea {
+  padding: 10px;
+  width: 75%;
+  border-radius: 10px;
+  background: #c5decd;
+  text-align: center;
+}
+
+.contact-content .button {
+  margin-top: 0.5rem;
+  background: #32373b;
+  border-radius: 25px;
+  color: #d16f2e;
+  vertical-align: middle;
+}
+
+.contenu {
+  overflow-x: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 25px;
+  -webkit-box-shadow: 0 2px 6px #424651;
+          box-shadow: 0 2px 6px #424651;
+  width: 50%;
+  min-width: 500px;
+  min-height: 750px;
+}
+
+.adress,
+.phone {
+  border-radius: 25px;
+  padding: 10px;
+  margin-top: 20px;
+  font-family: "Architects Daughter", cursive;
+  background: #424651;
+  color: #d16f2e;
+}
+
+.phone:hover span:hover {
+  color: #c5decd;
+}
+
+#comms {
+  font-family: "Architects Daughter", cursive;
+  margin: 10px;
+  background: #424651;
+  color: #d16f2e;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.form-message {
+  border-radius: 25px;
+  padding: 10px;
+  color: #32373b;
+  font-family: font-2;
 }
 /*# sourceMappingURL=styles.css.map */

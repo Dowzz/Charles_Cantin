@@ -22,7 +22,7 @@ $minHeight: 95vh;
 }
 
 html {
-  overflow-x: hidden;
+  overflow-x: scroll;
 }
 * {
   box-sizing: border-box;
@@ -51,38 +51,53 @@ a {
 a:visited {
   color: $orange;
 }
-::-webkit-scrollbar {
-  width: 10px;
+.hamburger {
+  display: none;
 }
-::-webkit-scrollbar-track {
-  background: transparent;
+button {
+  display: none;
 }
-::-webkit-scrollbar-thumb {
-  background: transparent;
+button {
+  z-index: 2;
+  background: $charbon;
+  color: $orange;
+  width: 3rem;
+  height: 3rem;
+  border-radius: $borderRadius;
+  font-size: 1.5rem;
+  position: fixed;
+  top: 4.5rem;
+  left: 0.5rem;
+  display: none;
 }
-::-webkit-scrollbar-thumb:hover {
-  background: transparent;
-}
-.home,
-.knowledges,
-.portfolio,
-.contact {
+.hamburger .navbar {
+  background: $onyx;
+  width: 100%;
+  margin: 0;
   display: flex;
-
-  @media screen and (max-width: 850px) {
-    display: block !important;
+  justify-content: center;
+  padding: 10px;
+  margin-top: 10rem;
+  box-shadow: $shadow;
+  ul {
+    width: 50%;
+    perspective: inherit;
+  }
+  li {
+    transform: inherit;
+    a {
+      font-size: 4rem !important;
+    }
   }
 }
-.homeContent,
-.knwoledgesContent,
-.portfolioContent,
-.contactContent {
-  margin-left: 0.4rem;
-  @media screen and (max-width: 850px) {
+@media screen and(max-width:1100px) {
+  body {
     margin-left: 0 !important;
   }
-}
-::-webkit-scrollbar {
-  width: 0px;
-  height: 0px;
+  .default {
+    display: none;
+  }
+  button {
+    display: block;
+  }
 }

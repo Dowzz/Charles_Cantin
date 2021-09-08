@@ -4,7 +4,7 @@ body {
 .home {
   width: 100%;
   @include verticalCenter;
-  height: 90vh;
+  height: 100vh;
 }
 .title {
   text-align: center;
@@ -20,4 +20,16 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
+}
+
+@media screen and(max-width:800px) {
+  .title {
+    font-size: 4rem;
+  }
+}
+
+@media screen and(max-width:500px) {
+  .title {
+    font-size: 2rem !important;
+  }
 }

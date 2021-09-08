@@ -3,7 +3,12 @@ import Navbar from '../component/Navbar'
 import styled, { keyframes } from 'styled-components'
 import { zoomInDown } from 'react-animations'
 import Footer from '../component/Footer';
+import $ from 'jquery'
 
+const menuToggle =() =>{
+   var menu= $(document.getElementsByClassName('hamburger'));
+   menu.fadeToggle();
+}
 const zoomAnimation = keyframes`${zoomInDown}`;
 
 const ZoomDiv= styled.div`
@@ -13,7 +18,9 @@ export default class Prestation extends Component {
     render() {
         return (
             <div>
-                <Navbar/>
+                <button className="responsive" onClick={menuToggle}><i className="fas fa-bars"></i></button>
+                <div className="hamburger"><Navbar/></div>
+                <div className="default"><Navbar/></div>
                 <div className="presta-content">
                 <h3 className='titre'>Prestations et Tarifs</h3>
                     <div className="contenu">
