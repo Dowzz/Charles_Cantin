@@ -36,12 +36,13 @@
 .footer .signature p {
   margin-left: 5px;
   margin-right: 5px;
+  margin-top: 20px;
   padding: 10px;
   color: $opal;
   font-size: 15px;
 }
-.footer .login a {
-  margin-left: 5px;
+.footer .login a,
+.footer .signup a {
   margin-right: 5px;
   border: 1px solid $orange;
   border-radius: $borderRadius;
