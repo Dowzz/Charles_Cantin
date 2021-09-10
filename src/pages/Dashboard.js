@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 import {useAuth} from'../contexts/AuthContext'
-import {Link, NavLink, useHistory} from "react-router-dom"
+import {NavLink, useHistory} from "react-router-dom"
 import Navbar from '../component/Navbar'
 import $ from 'jquery'
 
