@@ -7,7 +7,7 @@
   margin-left: 2rem;
   position: fixed;
   left: 0;
-  top: -4rem;
+  top: 0;
   ul {
     width: 1px;
     perspective: 500px;
@@ -28,7 +28,7 @@
     font-size: 7rem;
     box-shadow: $shadow;
     border-radius: $borderRadius;
-    line-height: 1.5;
+    line-height: 1.4;
     opacity: 0.6;
     padding: 0 20px;
     color: $orange;
@@ -79,6 +79,4 @@
   .social {
     justify-content: center;
   }
-}
-.dashboard {
 }

@@ -117,7 +117,7 @@ button.modal-toggle {
   margin-left: 2rem;
   position: fixed;
   left: 0;
-  top: -4rem;
+  top: 0;
 }
 
 .navbar ul {
@@ -150,7 +150,7 @@ button.modal-toggle {
   -webkit-box-shadow: 0 2px 6px #424651;
           box-shadow: 0 2px 6px #424651;
   border-radius: 40px;
-  line-height: 1.5;
+  line-height: 1.4;
   opacity: 0.6;
   padding: 0 20px;
   color: #d16f2e;
@@ -316,8 +316,8 @@ button.modal-toggle {
 .selector .scrollup {
   z-index: 5;
   position: fixed;
-  bottom: 5px;
-  right: 5px;
+  bottom: 50px;
+  right: 50px;
   width: 40px;
   height: 40px;
   fill: #d16f2e;
