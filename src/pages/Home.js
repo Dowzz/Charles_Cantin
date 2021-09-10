@@ -4,8 +4,8 @@ import Navbar from '../component/Navbar';
 import $ from 'jquery'
 
 const menuToggle =() =>{
-   var menu= $(document.getElementsByClassName('hamburger'));
-   menu.fadeToggle();
+    var menu= $(document.getElementsByClassName('hamburger'));
+    menu.fadeToggle();
     
 
 }

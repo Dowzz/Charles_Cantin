@@ -64,6 +64,14 @@ a:visited {
   left: 0;
   display: none;
 }
+button.modal-toggle {
+  background-color: $charbon;
+  color: $orange;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  border: none;
+}
 
 @media screen and(max-width:1100px) {
   .responsive {

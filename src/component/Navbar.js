@@ -1,10 +1,16 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import useModal from "./UseModal"
+import Modal from "./Modal";
+import Login from '../pages/Login';
+
 
 const Navbar = () => {
+   const { isShowing: isLoginFormShowed, toggle: toggleLoginForm } = useModal();
+  
     return (
-     
-            <div className="navbar">
+        <>
+        <div className="navbar">
                 <ul>
                     <li><NavLink exact to="/"
                     activeClassName="navActive">
@@ -32,9 +38,23 @@ const Navbar = () => {
                         <a href="/" target="__blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
                     </div>
                     </li>
+                    <li><div className="navActive">
+                        <a href='#/' rel="noopener noreferrer" className="login" onClick={toggleLoginForm}>Connexion</a>
+                    </div>
+                    </li>
                 </ul>
-
              </div>
+
+             <div className="App">
+               <Modal
+                 isShowing={isLoginFormShowed}
+                 hide={toggleLoginForm}
+                 title="Login"
+               >
+                 <Login></Login>
+               </Modal>
+             </div>
+             </>
 
     );
 };

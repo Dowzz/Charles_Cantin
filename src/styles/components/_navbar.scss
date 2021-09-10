@@ -7,7 +7,7 @@
   margin-left: 2rem;
   position: fixed;
   left: 0;
-  top: -2rem;
+  top: -4rem;
   ul {
     width: 1px;
     perspective: 500px;
@@ -31,9 +31,13 @@
     line-height: 1.5;
     opacity: 0.6;
     padding: 0 20px;
+    color: $orange;
   }
+
   li a.active,
-  li a:hover {
+  li a:hover,
+  li p:active,
+  li p:hover {
     opacity: 1;
     color: $opal;
   }
@@ -75,4 +79,6 @@
   .social {
     justify-content: center;
   }
+}
+.dashboard {
 }

@@ -1,9 +1,9 @@
 import React, {useRef} from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import {Form, Button, Card, Alert} from 'react-bootstrap'
 import { useState } from 'react'
 import {useAuth} from '../contexts/AuthContext'
-import { Link, NavLink} from 'react-router-dom'
+import {  NavLink} from 'react-router-dom'
+
+
 
 export default function ForgotPassword() {
     const emailRef= useRef()
@@ -29,30 +29,24 @@ export default function ForgotPassword() {
     }
         return (
             <>
-           <Card>
-                <Card.Body>
-                    <h2 className="text-center mb-4">Réinitialisation du mot de passe</h2>
-                    {error && <Alert variant="danger">{error}</Alert>}
-                    {message && <Alert variant="success">{message}</Alert>}
-                    <Form onSubmit={handleSubmit}>
-                        <Form.Group id="email">
-                            <Form.Label>Email</Form.Label>
-                            <Form.Control type="email"ref={emailRef} required/>
-                        </Form.Group>
-                        <Button disabled = {loading} className="w-100" type="submit">Réinitialisation du mot de passe</Button>
-                    </Form>
-                    <div className="w-100 text-center mt-3">
-                        <Link to="/login">Connexion</Link>
-                    </div>
-                </Card.Body>
-            <div className="w-100 text-center mt-2">
-            Pas de compte ? <Link to="/signupPage">Inscrivez Vous !</Link>
-            </div>
-            <NavLink exact to="/">
-                    <i className="fas fa-home"></i>
-                    <span>Accueil</span>
-                </NavLink>
-            </Card> 
+                <div className="contenu-auth">
+                    <h2 className="titre_second">Réinitialisation mot de passe</h2>
+                    {error && <alert variant="danger">{error}</alert>}
+                    {message && <alert variant="success">{message}</alert>}
+                    <form onSubmit={handleSubmit}>
+                        <section id="email">
+                            <label>Email</label>
+                            <input type="email"ref={emailRef} required/>
+                        </section>
+                        <button class="connect-button" disabled = {loading} type="submit">Réinitialisation du mot de passe</button>
+                    </form>
+                    <NavLink exact to="/">
+                        <span>Accueil</span>
+                    </NavLink>
+                </div>
             </>
+
+        
+            
         )
         }

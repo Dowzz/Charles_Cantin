@@ -13,6 +13,7 @@ import ForgotPassword from "./component/ForgotPassword";
 import UpdateProfile from "./component/UpdateProfile"
 
 function App() {
+
   return (
     <>
     <BrowserRouter>
@@ -29,10 +30,8 @@ function App() {
         </AuthProvider>
         <Route component={NotFound} />
       </Switch>
-    </BrowserRouter></>
-    
-
-    
+    </BrowserRouter>
+    </>
   );
 }
 

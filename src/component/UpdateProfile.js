@@ -1,11 +1,10 @@
 import React, {useRef} from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import {Form, Button, Card, Alert} from 'react-bootstrap'
 import { useState } from 'react/cjs/react.development'
 import {useAuth} from '../contexts/AuthContext'
 import { Link, NavLink, useHistory } from 'react-router-dom'
 
-export default function SUpdateProfile() {
+
+export default function UpdateProfile() {
 const emailRef= useRef()
 const passwordRef=useRef()
 const passwordConfirmRef=useRef()
@@ -13,6 +12,9 @@ const { currentUser, updatePassword, updateEmail } = useAuth()
 const [error, setError] =useState('')
 const [loading, setLoading] =useState(false)
 const history = useHistory()
+
+
+
 
 function handleSubmit(event){
     event.preventDefault();
@@ -41,34 +43,31 @@ function handleSubmit(event){
 }
     return (
         <>
-        <Card>
-            <Card.Body>
-                <h2 className="text-center mb-4">Mise a jour du profile</h2>
-                {error && <Alert variant="danger">{error}</Alert>}
-                <Form onSubmit={handleSubmit}>
-                    <Form.Group id="email">
-                        <Form.Label>Email</Form.Label>
-                        <Form.Control type="email"ref={emailRef} defaultValue={currentUser.email}/>
-                    </Form.Group>
-                    <Form.Group id="password">
-                        <Form.Label>Mot de passe</Form.Label>
-                        <Form.Control type="password"ref={passwordRef} placeholder="Laissez vide pour garder le mot de passe actuel"/>
-                    </Form.Group>
-                    <Form.Group id="password-confirm">
-                        <Form.Label>Confirmation du Mot de passe</Form.Label>
-                        <Form.Control type="password"ref={passwordConfirmRef} placeholder="Laissez vide pour garder le mot de passe actuel"/>
-                    </Form.Group>
-                    <Button disabled = {loading} className="w-100" type="submit">Mettre a jour</Button>
-                </Form>
-            </Card.Body>
-            <div className="w-100 text-center mt-2">
+        <div className="contenu-auth">
+            <h2 className="titre_second">Mise a jour du profile</h2>
+            {error && <alert variant="danger">{error}</alert>}
+            <form onSubmit={handleSubmit}>
+                <section id="email">
+                    <label>Email</label>
+                    <input type="email"ref={emailRef} defaultValue={currentUser.email}/>
+                </section>
+                <section id="password">
+                    <label>Mot de passe</label>
+                    <input type="password"ref={passwordRef} placeholder="Laissez vide pour garder le mot de passe actuel"/>
+                </section>
+                <section id="password-confirm">
+                    <label>Confirmation du Mot de passe</label>
+                    <input type="password"ref={passwordConfirmRef} placeholder="Laissez vide pour garder le mot de passe actuel"/>
+                </section>
+                <button disabled = {loading} className="connect-button" type="submit">Mettre a jour</button>
+            </form>
+            <div id="cancel">
                 <Link to="/dashboard">Annuler</Link>
             </div>
             <NavLink exact to="/">
-                    <i className="fas fa-home"></i>
                     <span>Accueil</span>
-                </NavLink>
-        </Card> 
+            </NavLink> 
+            </div>
         </>
     )
 }

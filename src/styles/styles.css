@@ -53,6 +53,15 @@ a:visited {
   display: none;
 }
 
+button.modal-toggle {
+  background-color: #424651;
+  color: #d16f2e;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  border: none;
+}
+
 @media screen and (max-width: 1100px) {
   .responsive {
     display: block;
@@ -77,24 +86,6 @@ a:visited {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
-}
-
-.title {
-  text-align: center;
-  font-family: "Ma Shan Zheng", cursive;
-  color: transparent;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-transform: uppercase;
-  font-size: 6rem;
-  line-height: 2;
-  letter-spacing: 0.8rem;
-  background: url(https://media.giphy.com/media/lntLuFt5WG3tvtqK7B/giphy.gif) center/cover;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
 }
 
 @media screen and (max-width: 800px) {
@@ -126,7 +117,7 @@ a:visited {
   margin-left: 2rem;
   position: fixed;
   left: 0;
-  top: -2rem;
+  top: -4rem;
 }
 
 .navbar ul {
@@ -162,10 +153,13 @@ a:visited {
   line-height: 1.5;
   opacity: 0.6;
   padding: 0 20px;
+  color: #d16f2e;
 }
 
 .navbar li a.active,
-.navbar li a:hover {
+.navbar li a:hover,
+.navbar li p:active,
+.navbar li p:hover {
   opacity: 1;
   color: #c5decd;
 }
@@ -233,7 +227,7 @@ a:visited {
   font-family: "Architects Daughter", cursive;
   position: fixed;
   bottom: 0;
-  left: 0;
+  right: 0;
   padding: 5px;
   -webkit-box-shadow: 0 5px 5px #32373b;
           box-shadow: 0 5px 5px #32373b;
@@ -832,5 +826,313 @@ label {
   padding: 10px;
   color: #32373b;
   font-family: font-2;
+}
+
+.titre_modal {
+  text-align: center;
+  font-family: "Ma Shan Zheng", cursive;
+  color: transparent;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-transform: uppercase;
+  font-size: 4rem;
+  margin-bottom: 20px;
+  letter-spacing: 0.8rem;
+  background: url(https://media.giphy.com/media/fnJWA6rIGgYmlksSEN/giphy.gif) center/cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+}
+
+@media screen and (max-width: 520px) {
+  .titre_modal {
+    font-size: 2rem;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1040;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal {
+  z-index: 100;
+  border-radius: 40px;
+  -webkit-box-shadow: 0 5px 5px #32373b;
+          box-shadow: 0 5px 5px #32373b;
+  background: transparent;
+  position: relative;
+  margin: auto;
+  border-radius: 5px;
+  max-width: 500px;
+  width: 80%;
+  padding: 1rem;
+}
+
+.modal-close-button {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #c5decd;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.modal-body {
+  color: #d16f2e;
+}
+
+form {
+  text-align: center;
+  width: 100%;
+}
+
+#email {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
+#password,
+password-confirm {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
+#email label {
+  padding: 0;
+  margin-right: 40px;
+}
+
+#email input {
+  background: #c5decd;
+  border-radius: 40px;
+  width: 300px;
+  height: 30px;
+}
+
+#password label,
+#password-confirm label {
+  padding: 0;
+  margin-right: 60px;
+}
+
+#password input {
+  background: #c5decd;
+  border-radius: 40px;
+  height: 30px;
+  width: 300px;
+}
+
+#password-confirm input {
+  width: 300px;
+  background: #c5decd;
+  border-radius: 40px;
+  height: 30px;
+}
+
+.connect-button {
+  background: #424651;
+  color: #d16f2e;
+  padding: 10px;
+  border-radius: 40px;
+  -webkit-box-shadow: 0 2px 6px #424651;
+          box-shadow: 0 2px 6px #424651;
+  margin-top: 20px;
+}
+
+.forgot {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.forgot a {
+  color: #d16f2e;
+  text-decoration: none;
+}
+
+#accueil-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.titre_second {
+  text-align: center;
+  font-family: "Ma Shan Zheng", cursive;
+  color: transparent;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-transform: uppercase;
+  font-size: 4rem;
+  margin-bottom: 20px;
+  letter-spacing: 0.8rem;
+  background: url(https://media.giphy.com/media/fnJWA6rIGgYmlksSEN/giphy.gif) center/cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+}
+
+@media screen and (max-width: 520px) {
+  .titre_second {
+    font-size: 2rem;
+  }
+}
+
+.contenu-auth {
+  margin-top: 4rem;
+  width: 800px;
+  padding: 20px;
+  -webkit-box-shadow: 0 2px 6px #424651;
+          box-shadow: 0 2px 6px #424651;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contenu-auth form {
+  text-align: center;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contenu-auth a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px;
+  color: #c5decd;
+}
+
+.contenu-auth a :hover {
+  color: #d16f2e;
+}
+
+.contenu-auth span:hover {
+  color: #d16f2e;
+}
+
+.contenu-auth label {
+  color: #c5decd;
+}
+
+#emailuser {
+  color: #c5decd;
+  padding: 10px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#emailuser .background {
+  background: #424651;
+  border-radius: 40px;
+}
+
+.connect-button {
+  background: none;
+  color: #d16f2e;
+  padding: 10px;
+  font-size: 30px;
+  border-radius: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.connect-button :hover {
+  color: #c5decd;
+}
+
+#cancel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #c5decd;
+  -webkit-box-shadow: 0 2px 6px #424651;
+          box-shadow: 0 2px 6px #424651;
+  border-radius: 40px;
+}
+
+#cancel :hover {
+  color: #d16f2e;
 }
 /*# sourceMappingURL=styles.css.map */

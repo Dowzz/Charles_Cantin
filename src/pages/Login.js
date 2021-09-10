@@ -3,7 +3,7 @@ import React, {useRef} from 'react'
 
 import { useState } from 'react'
 import {useAuth} from '../contexts/AuthContext'
-import { Link, NavLink, useHistory } from 'react-router-dom'
+import { Link,  useHistory } from 'react-router-dom'
 
 export default function Login() {
     const emailRef= useRef()
@@ -26,9 +26,9 @@ export default function Login() {
         setLoading(false)
     }
         return (
-            <>
+            <div>
            
-                    <h2 className="titre">Connexion</h2>
+                    <h2 className="titre_second">Connexion</h2>
                     {error && <alert variant="danger">{error}</alert>}
                     <form onSubmit={handleSubmit}>
                         <section id="email">
@@ -39,16 +39,11 @@ export default function Login() {
                             <label>Mot de passe</label>
                             <input type="password"ref={passwordRef} required/>
                         </section>
-                        <button disabled = {loading} className="" type="submit">Connexion</button>
+                        <button disabled = {loading} className="connect-button" type="submit">Connexion</button>
                     </form>
-                    <div className="">
+                    <div className="forgot">
                         <Link to="/forgot-password">Oubli du mot de passe </Link>
                     </div>
-            <NavLink exact to="/">
-                    <i className=""></i>
-                    <span>Accueil</span>
-                </NavLink>
-        
-            </>
+            </div>
         )
 }

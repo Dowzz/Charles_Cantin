@@ -3,21 +3,6 @@
   @include verticalCenter;
   height: 100vh;
 }
-.title {
-  text-align: center;
-  font-family: $font-4;
-  color: transparent;
-  flex-direction: column;
-  text-transform: uppercase;
-  font-size: 6rem;
-  line-height: 2;
-  letter-spacing: 0.8rem;
-  background: url(https://media.giphy.com/media/lntLuFt5WG3tvtqK7B/giphy.gif)
-    center/cover;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-}
 
 @media screen and(max-width:800px) {
   .title {

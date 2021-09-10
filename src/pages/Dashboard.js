@@ -1,7 +1,17 @@
 import React, {useState} from 'react'
-import {Card, Button, Alert} from 'react-bootstrap'
+
 import {useAuth} from'../contexts/AuthContext'
 import {Link, NavLink, useHistory} from "react-router-dom"
+import Navbar from '../component/Navbar'
+import $ from 'jquery'
+
+
+
+const menuToggle =() =>{
+    var menu= $(document.getElementsByClassName('hamburger'));
+    menu.fadeToggle();
+}
+
 
 
 export default function Dashboard() {
@@ -22,25 +32,34 @@ export default function Dashboard() {
 
     }
     return (
-        <>
-        <Card>
-            <Card.Body>
-                <h2 className="text-center mb-4">Profile</h2>
-                {error && <Alert variant="danger">{error}</Alert>}
-                <strong>Email: </strong> {currentUser.email}
-                <Link to="/update-profile" className="btn btn-primary w-100 mt-3">
-                    Mettre a jour le profil
-                </Link>
-            </Card.Body>
-        <div className="w-100 text-center mt-2">
-            <Button varient="link" onClick={handleLogout}>Déconnexion</Button>
-            </div>
-            <NavLink exact to="/">
-                    <i className="fas fa-home"></i>
-                    <span>Accueil</span>
-                </NavLink>
+        <>  
+        
+            <button className="responsive" onClick={menuToggle}><i className="fas fa-bars"></i></button>
+            <div className="hamburger"><Navbar/></div>
+            <div className="default"><Navbar/></div>
 
-        </Card>
+            <div className="contenu-auth">
+                <h2 className="titre_second">Profil</h2>
+                {error && <alert variant="danger">{error}</alert>}
+                <div id="emailuser">
+                    <div className="background">
+                        <strong>Email Utilisateur: </strong> 
+                        {currentUser.email}
+                    </div>
+                </div>
+            <div>
+            <NavLink exact to="/">
+                    <span>Accueil</span>   
+            </NavLink>
+            </div>
+            <div>
+            <NavLink exact to="/update-profile" className="">
+                <span>Mettre a jour le profil</span>
+            </NavLink>
+            </div>
+            <button className="connect-button" varient="link" onClick={handleLogout}>Déconnexion</button>
+            </div>
+  
             
         </>
     )
