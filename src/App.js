@@ -5,7 +5,6 @@ import Gallery from './pages/Gallery';
 import Prestation from './pages/Prestation';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
-import SignUpPage from "./pages/SignupPage";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import AuthProvider from "./contexts/AuthContext";
@@ -23,7 +22,6 @@ function App() {
         <Route path="/Galerie" exact component={Gallery}/>
         <Route path="/Prestations" exact component={Prestation}/>
         <Route path="/Me_contacter" exact component={Contact}/>
-        <Route path="/signupPage" exact component={SignUpPage}/>
         <PrivateRoute exact path="/dashboard" component={Dashboard}/>
         <PrivateRoute exact path="/update-profile" component={UpdateProfile}/>
         <Route path="/login" exact component={Login}/>

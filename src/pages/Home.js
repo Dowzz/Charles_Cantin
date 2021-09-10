@@ -19,7 +19,7 @@ const Home = () => {
             <div className="default"><Navbar/></div>
             <div className="homeContent">
                 <div className="content">
-                    <h1 className="title">Charles Cantin 
+                    <h1 className="titre" id="title">Charles Cantin 
                     <br />Photographe</h1>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {Card, Button, Alert} from 'react-bootstrap'
 import {useAuth} from'../contexts/AuthContext'
-import {Link, useHistory} from "react-router-dom"
+import {Link, NavLink, useHistory} from "react-router-dom"
 
 
 export default function Dashboard() {
@@ -35,6 +35,10 @@ export default function Dashboard() {
         <div className="w-100 text-center mt-2">
             <Button varient="link" onClick={handleLogout}>Déconnexion</Button>
             </div>
+            <NavLink exact to="/">
+                    <i className="fas fa-home"></i>
+                    <span>Accueil</span>
+                </NavLink>
 
         </Card>
             

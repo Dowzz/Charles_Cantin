@@ -6,10 +6,7 @@ export default class Footer extends Component {
             <div>
                 <div className="footer">
                     <div className="signature">
-                    <p><a href="https://my-react-cv.herokuapp.com/"> Dowzz BY DOM2A-2021</a></p>
-                    </div>
-                    <div className="signup">
-                        <a href="/signupPage" className="signup">Inscription</a>
+                    <a href="https://my-react-cv.herokuapp.com/"> Dowzz BY DOM2A-2021</a>
                     </div>
                     <div className="login">
                         <a href="/login" className="login">Connexion</a>

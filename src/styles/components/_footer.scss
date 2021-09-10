@@ -1,10 +1,11 @@
 .footer {
+  margin: 10px;
   font-family: $font-2;
   position: fixed;
   bottom: 0;
   left: 0;
   padding: 5px;
-  background: $charbon;
+  box-shadow: $shadow2;
   border-radius: $borderRadius;
   display: flex;
   width: fit-content;
@@ -33,10 +34,12 @@
   opacity: 0.8;
   color: $opal;
 }
+.footer .signature {
+  margin-right: 10px;
+}
 .footer .signature p {
   margin-left: 5px;
   margin-right: 5px;
-  margin-top: 20px;
   padding: 10px;
   color: $opal;
   font-size: 15px;

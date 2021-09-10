@@ -1,6 +1,6 @@
 import React, {useRef} from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import {Form, Button, Card, Alert} from 'react-bootstrap'
+
+
 import { useState } from 'react'
 import {useAuth} from '../contexts/AuthContext'
 import { Link, NavLink, useHistory } from 'react-router-dom'
@@ -27,33 +27,28 @@ export default function Login() {
     }
         return (
             <>
-           <Card>
-                <Card.Body>
-                    <h2 className="text-center mb-4">Connexion</h2>
-                    {error && <Alert variant="danger">{error}</Alert>}
-                    <Form onSubmit={handleSubmit}>
-                        <Form.Group id="email">
-                            <Form.Label>Email</Form.Label>
-                            <Form.Control type="email"ref={emailRef} required/>
-                        </Form.Group>
-                        <Form.Group id="password">
-                            <Form.Label>Mot de passe</Form.Label>
-                            <Form.Control type="password"ref={passwordRef} required/>
-                        </Form.Group>
-                        <Button disabled = {loading} className="w-100" type="submit">Connexion</Button>
-                    </Form>
-                    <div className="w-100 text-center mt-3">
+           
+                    <h2 className="titre">Connexion</h2>
+                    {error && <alert variant="danger">{error}</alert>}
+                    <form onSubmit={handleSubmit}>
+                        <section id="email">
+                            <label>Email</label>
+                            <input type="email"ref={emailRef} required/>
+                        </section>
+                        <section id="password">
+                            <label>Mot de passe</label>
+                            <input type="password"ref={passwordRef} required/>
+                        </section>
+                        <button disabled = {loading} className="" type="submit">Connexion</button>
+                    </form>
+                    <div className="">
                         <Link to="/forgot-password">Oubli du mot de passe </Link>
                     </div>
-                </Card.Body>
-            <div className="w-100 text-center mt-2">
-            Pas de compte ? <Link to="/signupPage">Inscrivez Vous !</Link>
-            </div>
             <NavLink exact to="/">
-                    <i className="fas fa-home"></i>
+                    <i className=""></i>
                     <span>Accueil</span>
                 </NavLink>
-            </Card> 
+        
             </>
         )
 }
