@@ -170,7 +170,6 @@ button.modal-toggle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 3rem;
 }
 
 .navbar .social a {
@@ -227,7 +226,6 @@ button.modal-toggle {
 .footer {
   margin: 10px;
   font-family: "Architects Daughter", cursive;
-  position: fixed;
   bottom: 0;
   right: 0;
   padding: 5px;
@@ -306,7 +304,6 @@ button.modal-toggle {
     text-align: center;
   }
   .footer {
-    position: fixed;
     width: 100%;
   }
 }
@@ -557,7 +554,7 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
+  height: 120vh;
   width: 100%;
   color: #d16f2e;
 }
@@ -630,6 +627,13 @@ img {
   }
   .titre {
     font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .titre {
+    font-size: 2rem;
+    letter-spacing: 0.2 !important;
   }
 }
 

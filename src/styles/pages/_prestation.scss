@@ -1,7 +1,7 @@
 .presta-content {
   @include verticalCenter;
   flex-direction: column;
-  height: 100vh;
+  height: 120vh;
   width: 100%;
   color: $orange;
 }
@@ -62,5 +62,11 @@
   }
   .titre {
     font-size: 3rem;
+  }
+}
+@media screen and(max-width:380px) {
+  .titre {
+    font-size: 2rem;
+    letter-spacing: 0.2 !important;
   }
 }
