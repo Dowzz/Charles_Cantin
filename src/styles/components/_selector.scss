@@ -1,5 +1,6 @@
 .selector {
-  width: 99%;
+  margin-left: 20rem;
+  width: 75%;
 
   .scrollup {
     z-index: 5;
@@ -147,12 +148,16 @@ img {
     }
   }
 }
-@media screen and(max-width:1120px) {
+@media screen and(max-width:1100px) {
   .radioDisplay input {
     display: none;
   }
+  .selector {
+    margin-left: 0;
+    width: 100%;
+  }
 }
-@media screen and(max-width:550px) {
+@media screen and(max-width:650px) {
   .radioDisplay {
     display: none;
   }

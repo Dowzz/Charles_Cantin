@@ -29,11 +29,11 @@ $minHeight: 95vh;
   padding: 0;
 }
 body {
-  margin-left: 20rem;
   font-family: $font-2;
   background: url("../media/camera.jpg");
   background-size: 100%;
 }
+
 button {
   cursor: pointer;
 }
@@ -82,5 +82,8 @@ button.modal-toggle {
   }
   .default {
     display: none;
+  }
+  .content {
+    margin-left: 0;
   }
 }

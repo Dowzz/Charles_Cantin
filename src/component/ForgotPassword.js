@@ -30,7 +30,7 @@ export default function ForgotPassword() {
         return (
             <>
                 <div className="contenu-auth">
-                    <h2 className="titre_second">Réinitialisation mot de passe</h2>
+                    <h2 className="titre_second">Reset du Pasword</h2>
                     {error && <alert variant="danger">{error}</alert>}
                     {message && <alert variant="success">{message}</alert>}
                     <form onSubmit={handleSubmit}>
@@ -38,7 +38,7 @@ export default function ForgotPassword() {
                             <label>Email</label>
                             <input type="email"ref={emailRef} required/>
                         </section>
-                        <button class="connect-button" disabled = {loading} type="submit">Réinitialisation du mot de passe</button>
+                        <button className="connect-button" disabled = {loading} type="submit">Reset du  Password</button>
                     </form>
                     <NavLink exact to="/">
                         <span>Accueil</span>

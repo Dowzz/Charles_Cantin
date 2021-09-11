@@ -52,7 +52,7 @@ label {
 .contact-content {
   @include verticalCenter;
   flex-direction: column;
-  height: 100vh;
+
   width: 100%;
   color: $orange;
   input {
@@ -79,7 +79,6 @@ label {
     vertical-align: middle;
   }
   .contenu {
-    overflow-x: scroll;
     display: flex;
     flex-direction: column;
     text-align: center;

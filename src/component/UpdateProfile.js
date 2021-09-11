@@ -44,7 +44,7 @@ function handleSubmit(event){
     return (
         <>
         <div className="contenu-auth">
-            <h2 className="titre_second">Mise a jour du profile</h2>
+            <h2 className="titre_second">Changer Identifiants</h2>
             {error && <alert variant="danger">{error}</alert>}
             <form onSubmit={handleSubmit}>
                 <section id="email">
