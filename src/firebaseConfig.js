@@ -1,7 +1,8 @@
 import firebase from "firebase/compat";
 import "firebase/compat/auth";
+import "firebase/storage";
 
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyDVpuZ9fm69yRBPt7yxl_FdMm4SkC4BoPQ",
   authDomain: "auth-production-7b5a1.firebaseapp.com",
   databaseURL: "https://auth-production-7b5a1-default-rtdb.firebaseio.com",
