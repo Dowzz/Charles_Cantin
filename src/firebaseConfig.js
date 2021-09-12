@@ -1,17 +1,17 @@
-import firebase from "firebase/compat"
-import "firebase/compat/auth"
+import firebase from "firebase/compat";
+import "firebase/compat/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyB1ZEIGK1laLOaD4lOuabn8Ee3CxghUS4A",
-    authDomain: "auth-developpment-2f46d.firebaseapp.com",
-    databaseURL: "https://auth-developpment-2f46d-default-rtdb.firebaseio.com",
-    projectId: "auth-developpment-2f46d",
-    storageBucket: "auth-developpment-2f46d.appspot.com",
-    messagingSenderId: "87506766267",
-    appId: "1:87506766267:web:57ae12c2eca54dec4d1c9e"
-  };
+  apiKey: "AIzaSyDVpuZ9fm69yRBPt7yxl_FdMm4SkC4BoPQ",
+  authDomain: "auth-production-7b5a1.firebaseapp.com",
+  databaseURL: "https://auth-production-7b5a1-default-rtdb.firebaseio.com",
+  projectId: "auth-production-7b5a1",
+  storageBucket: "auth-production-7b5a1.appspot.com",
+  messagingSenderId: "291878134150",
+  appId: "1:291878134150:web:3178391690dd8c99cf8c07",
+};
 
-  firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
-  export default firebase;
-  export const auth = firebase.auth()
+export default firebase;
+export const auth = firebase.auth();
