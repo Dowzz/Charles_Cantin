@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
-
+import firebase from "../firebaseConfig"
 import {useAuth} from'../contexts/AuthContext'
 import {NavLink, useHistory} from "react-router-dom"
 import Navbar from '../component/Navbar'
 import $ from 'jquery'
+import Read from '../component/Read'
 
 
 
@@ -12,9 +13,27 @@ const menuToggle =() =>{
     menu.fadeToggle();
 }
 
-
-
 export default function Dashboard() {
+    const [name, setName]=useState ('')
+    const [categorie, setCategorie]=useState ('')
+    const [source, setSource]=useState ('')
+    
+
+
+    const createPhoto =() => {
+        const photosDB = firebase.database().ref("photoDB")
+        const photo = {
+            Name: name,
+            Categorie:categorie,
+            Source:source
+        };
+        photosDB.push(photo);
+
+        setName('')
+        setCategorie('')
+        setSource('')
+    }
+
     
     const [error, setError] =useState('')
     const {currentUser, logout} = useAuth()
@@ -47,17 +66,47 @@ export default function Dashboard() {
                         {currentUser.email}
                     </div>
                 </div>
-            <div>
-            <NavLink exact to="/">
-                    <span>Accueil</span>   
-            </NavLink>
-            </div>
-            <div>
-            <NavLink exact to="/update-profile" className="">
-                <span>Mettre a jour le profil</span>
-            </NavLink>
-            </div>
-            <button className="connect-button" varient="link" onClick={handleLogout}>Déconnexion</button>
+                <div className="create">
+                        <h4>Ajouter une photo</h4>
+                        <div className="form">
+                        <input type="text"
+                            placeholder="Nom"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}/>
+                 
+                        <select id="dropdown" 
+                        name="Catégorie" 
+                        onChange={(e) => setCategorie(e.target.value)} >
+                        <option value="">Choix catégorie</option>
+                        <option value="Mariage">Mariage</option>
+                        <option value="Grossesse">Grossesse</option>
+                        <option value="Bébé">Bébé</option>
+                        <option value="Famille">Famille</option>
+                        <option value="Bapteme">Bapteme</option>
+                        <option value="Couple">Couple</option>
+                        <option value="Portrait">Portrait</option>
+                        </select>
+                        <input type="file"
+                            placeholder="Source"
+                            value={source}
+                            onChange={(e) => setSource(e.target.value)}/>
+                            <button onClick={createPhoto}>Ajouter</button>
+                        </div>
+                    </div>
+
+                        <Read/>
+
+                <div>
+                <NavLink exact to="/">
+                        <span>Accueil</span>   
+                </NavLink>
+                </div>
+                <div>
+                <NavLink exact to="/update-profile" className="">
+                    <span>Mettre a jour le profil</span>
+                </NavLink>
+                </div>
+                <button className="connect-button" varient="link" onClick={handleLogout}>Déconnexion</button>
             </div>
   
             
