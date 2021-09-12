@@ -9,6 +9,7 @@ const UpdateDelete = ({ item }) => {
   const [categorieUpdate, setUpdateCategorie] = useState(null);
   const [sourceUpdate, setUpdateSource] = useState(null);
   const [isLoading, setIsloading] = useState(true);
+
   async function onFileChange(e) {
     const file = e.target.files[0];
     const storageRef = firebase.storage().ref();
@@ -18,6 +19,7 @@ const UpdateDelete = ({ item }) => {
   }
 
   const updateItem = () => {
+    setIsloading(true);
     let photo = firebase.database().ref("photoDB").child(item.id);
 
     if (nameUpdate !== null) {
@@ -36,6 +38,7 @@ const UpdateDelete = ({ item }) => {
       });
     }
     setUpdate(false);
+    setIsloading(true);
   };
 
   const deleteItem = () => {
@@ -60,7 +63,7 @@ const UpdateDelete = ({ item }) => {
         </>
       )}
       {update && (
-        <div classname="item-container-update">
+        <div className="item-container-update">
           <input
             type="text"
             defaultValue={item.name}
