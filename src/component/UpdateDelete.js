@@ -1,12 +1,21 @@
 import React from "react";
 import { useState } from "react/cjs/react.development";
 import firebase from "../firebaseConfig";
+import Uploader from "./Uploader";
 
 const UpdateDelete = ({ item }) => {
   const [update, setUpdate] = useState(false);
   const [nameUpdate, setUpdateName] = useState(null);
   const [categorieUpdate, setUpdateCategorie] = useState(null);
   const [sourceUpdate, setUpdateSource] = useState(null);
+  const [isLoading, setIsloading] = useState(true);
+  async function onFileChange(e) {
+    const file = e.target.files[0];
+    const storageRef = firebase.storage().ref();
+    const fileRef = storageRef.child(file.name);
+    await fileRef.put(file);
+    setUpdateSource(await fileRef.getDownloadURL().then(setIsloading(false)));
+  }
 
   const updateItem = () => {
     let photo = firebase.database().ref("photoDB").child(item.id);
@@ -31,6 +40,7 @@ const UpdateDelete = ({ item }) => {
 
   const deleteItem = () => {
     let photo = firebase.database().ref("photoDB").child(item.id);
+
     photo.remove();
   };
 
@@ -70,11 +80,14 @@ const UpdateDelete = ({ item }) => {
             <option value="Couple">Couple</option>
             <option value="Portrait">Portrait</option>
           </select>
-          <input
-            type="file"
-            onChange={(e) => setUpdateSource(e.target.value)}
+          <Uploader
+            placeholder="Source"
+            value={sourceUpdate}
+            onChange={onFileChange}
           />
-          <button onClick={updateItem}>valider changements</button>
+          {isLoading && sourceUpdate ? null : (
+            <button onClick={updateItem}>Ajouter</button>
+          )}
         </div>
       )}
     </li>

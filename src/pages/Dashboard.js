@@ -11,23 +11,23 @@ const menuToggle = () => {
   var menu = $(document.getElementsByClassName("hamburger"));
   menu.fadeToggle();
 };
+const photosDB = firebase.database().ref("photoDB");
 
 export default function Dashboard() {
   const [name, setName] = useState("");
   const [categorie, setCategorie] = useState("");
-  const [source, setSource] = useState(null);
+  const [source, setSource] = useState("");
+  const [isLoading, setIsloading] = useState(true);
 
   async function onFileChange(e) {
     const file = e.target.files[0];
     const storageRef = firebase.storage().ref();
     const fileRef = storageRef.child(file.name);
     await fileRef.put(file);
-    const URL = await fileRef.getDownloadURL();
-    setSource(URL);
+    setSource(await fileRef.getDownloadURL().then(setIsloading(false)));
   }
 
-  const createPhoto = () => {
-    const photosDB = firebase.database().ref("photoDB");
+  async function createPhoto() {
     const photo = {
       Name: name,
       Categorie: categorie,
@@ -38,7 +38,8 @@ export default function Dashboard() {
     setName("");
     setCategorie("");
     setSource("");
-  };
+    setIsloading(true);
+  }
 
   const [error, setError] = useState("");
   const { currentUser, logout } = useAuth();
@@ -104,7 +105,7 @@ export default function Dashboard() {
               value={source}
               onChange={onFileChange}
             />
-            <button onClick={createPhoto}>Ajouter</button>
+            {isLoading ? null : <button onClick={createPhoto}>Ajouter</button>}
           </div>
         </div>
 
