@@ -2,7 +2,7 @@
 
 Pour le déploiement
 ## Connexion au site Heroku, relié a Github
---Lien vers le repo github crée pour le site
+##Lien vers le repo github crée pour le site
 -- cliquer sur Automatic Deploy
 --Choisir la branche a déployer (dans mon cas : main)
 -- cliquer a nouveau sur automatic deploy
