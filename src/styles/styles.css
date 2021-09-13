@@ -135,7 +135,7 @@ button.modal-toggle {
   font-weight: 800;
   border-radius: 40px;
   text-transform: uppercase;
-  width: 100%;
+  width: 350px;
   z-index: 1;
   position: fixed;
   left: 0;
@@ -354,6 +354,7 @@ button.modal-toggle {
 }
 
 .gallery-content .radioDisplay {
+  z-index: 2;
   position: fixed;
   top: 0;
   right: 0;
@@ -392,41 +393,7 @@ button.modal-toggle {
 }
 
 .gallery-content .radioDisplay .categorie li input[type="radio"] {
-  visibility: hidden;
-  position: relative;
-}
-
-.gallery-content .radioDisplay .categorie li input[type="radio"]:before {
-  content: "";
-  visibility: visible;
-  position: absolute;
-  top: -4px;
-  height: 0.9rem;
-  width: 0.9rem;
-  border-radius: 50%;
-  border: 2px solid #d16f2e;
-  cursor: pointer;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.gallery-content .radioDisplay .categorie li input[type="radio"]:after {
-  content: "";
-  visibility: visible;
-  position: absolute;
-  top: -4px;
-  left: -12px;
-  height: 0.9rem;
-  width: 0.9rem;
-  border-radius: 50%;
-  cursor: pointer;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  background: #d16f2e;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transform-origin: center;
-          transform-origin: center;
+  display: none;
 }
 
 .gallery-content .radioDisplay .categorie li input:checked:after {
@@ -442,6 +409,49 @@ button.modal-toggle {
 
 .gallery-content .radioDisplay .categorie li label {
   cursor: pointer;
+}
+
+.gallery-content .radioDisplay2 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  display: none;
+}
+
+.gallery-content .radioDisplay2 .categorie {
+  background: #424651;
+  border-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Architects Daughter", cursive;
+  font-weight: 600;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #d16f2e;
+}
+
+.gallery-content .radioDisplay2 .categorie li {
+  color: #c5decd;
+  text-transform: uppercase;
+  margin-right: 5px;
+  z-index: 2;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gallery-content .radioDisplay2 .categorie li input[type="radio"] {
+  display: none;
 }
 
 .gallery-content .selection {
@@ -580,7 +590,8 @@ button.modal-toggle {
   .gallery-content {
     margin-left: 0;
   }
-  .radioDisplay input {
+  .radioDisplay input,
+  .radioDisplay2 input {
     display: none;
   }
 }
@@ -1168,6 +1179,10 @@ body {
   color: #c5decd;
 }
 
+.error {
+  color: #d16f2e;
+}
+
 .toolbar {
   border-radius: 40px;
   -webkit-box-shadow: 0 2px 6px #424651;
@@ -1233,12 +1248,12 @@ body {
   -webkit-box-shadow: 0 2px 6px #424651;
           box-shadow: 0 2px 6px #424651;
   color: #d16f2e;
-  padding: 10px;
 }
 
 .create #name:focus,
 .create #dropdown:focus {
   background-color: rgba(0, 0, 0, 0.5);
+  color: #d16f2e;
 }
 
 .create #name:hover,

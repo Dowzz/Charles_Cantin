@@ -25,6 +25,9 @@
     color: $opal;
   }
 }
+.error {
+  color: $orange;
+}
 .toolbar {
   @include styleBox;
   background-color: rgba(0, 0, 0, 0.5);
@@ -69,11 +72,11 @@
     background: rgba(0, 0, 0, 0.5);
     @include styleBox;
     color: $orange;
-    padding: 10px;
   }
   #name:focus,
   #dropdown:focus {
     background-color: rgba(0, 0, 0, 0.5);
+    color: $orange;
   }
   #name:hover,
   #dropdown:hover,

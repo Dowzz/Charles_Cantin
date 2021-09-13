@@ -59,7 +59,7 @@ export default function UpdateProfile() {
       </div>
       <div className="contenu-change">
         <h2 className="titre_second">Changer Identifiants</h2>
-        {error && <alert variant="danger">{error}</alert>}
+        {error && <p className="error">{error}</p>}
         <form onSubmit={handleSubmit}>
           <section id="email">
             <label>Email</label>

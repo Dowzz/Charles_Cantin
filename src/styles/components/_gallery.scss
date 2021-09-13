@@ -1,6 +1,7 @@
 .gallery-content {
   margin-left: 20rem;
   .radioDisplay {
+    z-index: 2;
     position: fixed;
     top: 0;
     right: 0;
@@ -23,36 +24,7 @@
         @include verticalCenter;
 
         input[type="radio"] {
-          visibility: hidden;
-          position: relative;
-          &:before {
-            content: "";
-            visibility: visible;
-            position: absolute;
-            top: -4px;
-
-            height: 0.9rem;
-            width: 0.9rem;
-            border-radius: 50%;
-            border: 2px solid $orange;
-            cursor: pointer;
-            transition: 0.3s;
-          }
-          &:after {
-            content: "";
-            visibility: visible;
-            position: absolute;
-            top: -4px;
-            left: -12px;
-            height: 0.9rem;
-            width: 0.9rem;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: 0.3s;
-            background: $orange;
-            transform: scale(0);
-            transform-origin: center;
-          }
+          display: none;
         }
         input:checked:after {
           transform: scale(1.17) translate(-25%, -25%);
@@ -67,6 +39,35 @@
         }
       }
     }
+  }
+  .radioDisplay2 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    .categorie {
+      background: $charbon;
+      border-radius: $borderRadius;
+      display: flex;
+      font-family: $font-2;
+      font-weight: 600;
+      justify-content: center;
+
+      color: $orange;
+      li {
+        color: $opal;
+        text-transform: uppercase;
+        margin-right: 5px;
+        z-index: 2;
+        font-size: 1rem;
+        @include verticalCenter;
+
+        input[type="radio"] {
+          display: none;
+        }
+      }
+    }
+    display: none;
   }
   .selection {
     background-color: rgba(0, 0, 0, 0.8);
@@ -175,7 +176,8 @@
   .gallery-content {
     margin-left: 0;
   }
-  .radioDisplay input {
+  .radioDisplay input,
+  .radioDisplay2 input {
     display: none;
   }
 }
@@ -183,6 +185,7 @@
   .radioDisplay {
     display: none;
   }
+
   .selection {
     display: flex !important;
   }

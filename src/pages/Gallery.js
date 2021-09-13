@@ -19,20 +19,20 @@ const menuToggle = () => {
 };
 
 const toggle = () => {
-  var menu = $(document.getElementsByClassName("radioDisplay"));
+  var menu = $(document.getElementsByClassName("radioDisplay2"));
   menu.fadeToggle();
 };
 
 const Gallery = () => {
-  const [radios, setRadios] = useState("Couple");
+  const [radios, setRadios] = useState("Portrait");
   const [photolist, setPhotolist] = useState([]);
   const Radiolist = [
-    { id: 1, value: "Mariage" },
-    { id: 2, value: "Grossesse" },
-    { id: 3, value: "Bébé" },
+    { id: 1, value: "bapteme" },
+    { id: 2, value: "Bébé" },
+    { id: 3, value: "Couple" },
     { id: 4, value: "Famille" },
-    { id: 5, value: "Bapteme" },
-    { id: 6, value: "Couple" },
+    { id: 5, value: "Grossesse" },
+    { id: 6, value: "Mariage" },
     { id: 7, value: "Portrait" },
   ];
   useEffect(() => {
@@ -74,10 +74,27 @@ const Gallery = () => {
               return (
                 <li key={radio.id}>
                   <input
-                    onClick={toggle}
                     type="radio"
                     name="radio"
                     checked={radio.value === radios}
+                    value={radio.value}
+                    id={radio.value}
+                    onChange={handleChange}
+                  />
+                  <label htmlFor={radio.value}>{radio.value}</label>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className="radioDisplay2 radioDisplayH">
+          <ul className="categorie">
+            {Radiolist.map((radio) => {
+              return (
+                <li onClick={toggle} key={radio.id}>
+                  <input
+                    type="radio"
+                    name="radio"
                     value={radio.value}
                     id={radio.value}
                     onChange={handleChange}

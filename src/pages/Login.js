@@ -28,7 +28,7 @@ export default function Login() {
   return (
     <div>
       <h2 className="titre_second">Connexion</h2>
-      {error && <alert variant="danger">{error}</alert>}
+      {error && <p>{error}</p>}
       <form onSubmit={handleSubmit}>
         <section id="email">
           <label>Email</label>
