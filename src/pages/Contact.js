@@ -51,7 +51,7 @@ const Contact = () => {
                     alert("Téléphone copié !");
                   }}
                 >
-                  06.85.61.38.74
+                  06.21.33.44.56
                 </span>
               </CopyToClipboard>
             </div>
