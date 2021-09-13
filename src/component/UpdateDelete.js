@@ -52,20 +52,39 @@ const UpdateDelete = ({ item }) => {
       {update === false && (
         <>
           <div className="item-container">
-            <h4>{item.Name}</h4>
-            <p>{item.Categorie}</p>
-            <img src={item.Source} alt=""></img>
+            <div className="name-container">
+              <h4 className="namePhoto" id="active">
+                Nom de la photo :
+              </h4>
+              <h4 className="namePhoto">{item.Name}</h4>
+            </div>
+            <div className="categorie-container">
+              <h4 className="categoriename" id="active">
+                Catégorie :
+              </h4>
+              <h4 className="categoriename"> {item.Categorie}</h4>
+            </div>
+            <div className="button-container">
+              <button
+                className="connect-button"
+                onClick={() => setUpdate(!update)}
+              >
+                Mise à jour
+              </button>
+              <button className="connect-button" onClick={deleteItem}>
+                Supprimer
+              </button>
+            </div>
           </div>
-          <div className="button-container">
-            <button onClick={() => setUpdate(!update)}>Mise à jour</button>
-            <button onClick={deleteItem}>Supprimer</button>
-          </div>
+          <img className="image" src={item.Source} alt=""></img>
         </>
       )}
       {update && (
-        <div className="item-container-update">
+        <div className="item-container-update create">
           <input
+            id="name"
             type="text"
+            placeholder="Nom"
             defaultValue={item.name}
             onChange={(e) => setUpdateName(e.target.value)}
           />
@@ -84,12 +103,15 @@ const UpdateDelete = ({ item }) => {
             <option value="Portrait">Portrait</option>
           </select>
           <Uploader
+            className="upload"
             placeholder="Source"
             value={sourceUpdate}
             onChange={onFileChange}
           />
           {isLoading && sourceUpdate ? null : (
-            <button onClick={updateItem}>Ajouter</button>
+            <button className="add" onClick={updateItem}>
+              Ajouter
+            </button>
           )}
         </div>
       )}

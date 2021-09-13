@@ -1,0 +1,314 @@
+.contenu-auth {
+  margin-left: 25rem;
+  margin-top: 4rem;
+  padding: 20px;
+  @include styleBox;
+  text-align: center;
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  a {
+    color: $opal;
+    :hover {
+      color: $orange;
+    }
+  }
+  span:hover {
+    color: $orange;
+  }
+
+  label {
+    color: $opal;
+  }
+}
+.toolbar {
+  @include styleBox;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: $opal;
+  padding: 10px;
+
+  .background {
+    padding: 10px;
+    border-radius: $borderRadius;
+  }
+  .emailuser {
+    text-align: center;
+    color: $orange;
+  }
+  .bar {
+    display: flex;
+    justify-content: center;
+    .connect-button {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: $orange;
+      padding: 10px;
+      font-size: 15px;
+      border-radius: $borderRadius;
+      margin-right: 20px;
+    }
+    .connect-button:hover {
+      color: $opal;
+      background-color: rgba(0, 0, 0, 1);
+    }
+  }
+}
+.create {
+  .createtitle {
+    text-align: center;
+    color: $orange;
+  }
+  .form {
+    display: flex;
+    justify-content: center;
+  }
+  #name,
+  #dropdown {
+    background: $opal;
+    @include styleBox;
+  }
+  .add {
+    background: rgba(0, 0, 0, 0.5);
+    @include styleBox;
+    color: $orange;
+    padding: 10px;
+  }
+  #name:focus,
+  #dropdown:focus {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  #name:hover,
+  #dropdown:hover,
+  .add:hover {
+    border-color: $orange;
+  }
+  .upload::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .upload::before {
+    content: "Fichier";
+    display: inline-block;
+    background: $opal;
+    border: 2px inset $charbon;
+    @include styleBox;
+    color: $onyx;
+    padding: 2px 8px;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .upload:hover::before {
+    border-color: $orange;
+  }
+}
+.item-container {
+  display: flex;
+  .name-container {
+    display: flex;
+    flex-direction: row;
+    .namePhoto {
+      margin-right: 20px;
+      color: $opal;
+    }
+  }
+  .categorie-container {
+    display: flex;
+    .categoriename {
+      margin-right: 20px;
+      color: $opal;
+    }
+  }
+  #active {
+    @include styleBox;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-left: 5px;
+    padding-right: 5px;
+    color: $orange;
+  }
+  .connect-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: $orange;
+    padding: 10px;
+    border-radius: $borderRadius;
+    box-shadow: $shadow;
+    margin-top: 10px;
+    margin-right: 20px;
+  }
+  .connect-button:hover {
+    color: $opal;
+    background-color: rgba(0, 0, 0, 1);
+  }
+}
+.lecture {
+  width: 100%;
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+}
+.scrollup {
+  z-index: 5;
+  position: fixed;
+  bottom: 40px;
+  right: 50%;
+  transform: translate(20px);
+  width: 40px;
+  height: 40px;
+  fill: $orange;
+  border-radius: 50%;
+  box-shadow: $shadow;
+  background-color: rgba(0, 0, 0, 0.8);
+  .icon {
+    width: 40px;
+    height: 40px;
+    color: $orange;
+    animation: scrollTop 05s alternate ease infinite;
+  }
+  @keyframes scrollTop {
+    from {
+      transform: translateY(5px);
+    }
+    to {
+      transform: translateY(-1px);
+    }
+  }
+}
+.contenu-change {
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-left: 25rem;
+  margin-top: 4rem;
+  padding: 20px;
+  @include styleBox;
+  text-align: center;
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  a {
+    text-decoration: none;
+  }
+  span:hover {
+    color: $orange;
+  }
+
+  label {
+    color: $opal;
+  }
+}
+#email {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  :focus {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: $orange;
+  }
+  :hover {
+    border-color: $orange;
+  }
+}
+#password {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  :focus {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: $orange;
+  }
+  :hover {
+    border-color: $orange;
+  }
+}
+#password-confirm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  :focus {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: $orange;
+    :hover {
+      border-color: $orange;
+    }
+  }
+}
+#email label {
+  padding: 0;
+  margin-right: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+#email input {
+  color: $onyx;
+  background: $opal;
+  border-radius: $borderRadius;
+  width: 300px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#password label {
+  padding: 0;
+  margin-right: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+#password input {
+  color: $onyx;
+  background: $opal;
+  border-radius: $borderRadius;
+  height: 30px;
+  width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+}
+#password-confirm label {
+  padding: 0;
+  margin-right: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+#password-confirm input {
+  width: 300px;
+  background: $opal;
+  border-radius: $borderRadius;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.connect-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: $orange;
+  padding: 10px;
+  border-radius: $borderRadius;
+  box-shadow: $shadow;
+  margin-top: 20px;
+}
+.connect-button:hover {
+  color: $opal;
+  background-color: rgba(0, 0, 0, 1);
+}
+#cancel {
+  margin-right: 20px;
+}
+#cancel a {
+  color: $orange;
+}
+#cancel a:hover {
+  color: $opal;
+}
+@media screen and (max-width: 1100px) {
+  .contenu-auth {
+    padding: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+}

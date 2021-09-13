@@ -1,11 +1,12 @@
 .footer {
+  position: fixed;
   margin: 10px;
   font-family: $font-2;
-
+  transform: translate(20px);
   bottom: 0;
   right: 0;
   padding: 5px;
-  box-shadow: $shadow2;
+  box-shadow: $shadow;
   border-radius: $borderRadius;
   display: flex;
   width: fit-content;

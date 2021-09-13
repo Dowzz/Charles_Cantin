@@ -1,0 +1,53 @@
+.forgot {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  a {
+    color: $orange;
+    text-decoration: none;
+  }
+}
+#accueil-modal {
+  display: flex;
+  justify-content: center;
+}
+body {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1100px) {
+  .titre_second {
+    letter-spacing: 0.2rem;
+  }
+}
+@media screen and (max-width: 860px) {
+  .titre_second {
+    font-size: 3rem;
+  }
+  #email input,
+  #password input,
+  #password-confirm input {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .titre_second,
+  .titre_modal {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  #email input {
+    width: 200px;
+  }
+  #email,
+  #password,
+  #password-confirm {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}

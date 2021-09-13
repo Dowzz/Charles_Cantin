@@ -1,45 +1,10 @@
-.selector {
+.gallery-content {
   margin-left: 20rem;
-  width: 75%;
-
-  .scrollup {
-    z-index: 5;
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
-    width: 40px;
-    height: 40px;
-    fill: $orange;
-    border-radius: 50%;
-    box-shadow: $shadow;
-    .icon {
-      width: 40px;
-      height: 40px;
-      color: $orange;
-      animation: scrollTop 05s alternate ease infinite;
-    }
-    @keyframes scrollTop {
-      from {
-        transform: translateY(2px);
-      }
-      to {
-        transform: translateY(-1px);
-      }
-    }
-  }
-  .selection {
-    background: $charbon;
-    font-family: $font-2;
-    color: $orange;
-    text-align: center;
-    justify-content: center;
-    border-radius: $borderRadius;
-    width: 100%;
-    display: none;
-  }
   .radioDisplay {
-    width: 99%;
-
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
     .categorie {
       background: $charbon;
       border-radius: $borderRadius;
@@ -65,7 +30,7 @@
             visibility: visible;
             position: absolute;
             top: -4px;
-            left: -12px;
+
             height: 0.9rem;
             width: 0.9rem;
             border-radius: 50%;
@@ -92,7 +57,7 @@
         input:checked:after {
           transform: scale(1.17) translate(-25%, -25%);
           top: 2px;
-          left: -6px;
+          left: 7px;
         }
         input:checked + label {
           color: $orange;
@@ -100,6 +65,51 @@
         label {
           cursor: pointer;
         }
+      }
+    }
+  }
+  .selection {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 4rem;
+    right: 0;
+    font-family: $font-2;
+    color: $orange;
+    text-align: center;
+    justify-content: center;
+    border-radius: $borderRadius;
+    width: 100%;
+    display: none;
+  }
+}
+
+.selector {
+  width: 100%;
+
+  .scrollup {
+    z-index: 5;
+    position: fixed;
+    bottom: 40px;
+    right: 50%;
+    transform: translate(20px);
+    width: 40px;
+    height: 40px;
+    fill: $orange;
+    border-radius: 50%;
+    box-shadow: $shadow;
+    background-color: rgba(0, 0, 0, 0.8);
+    .icon {
+      width: 40px;
+      height: 40px;
+      color: $orange;
+      animation: scrollTop 05s alternate ease infinite;
+    }
+    @keyframes scrollTop {
+      from {
+        transform: translateY(5px);
+      }
+      to {
+        transform: translateY(-1px);
       }
     }
   }
@@ -137,24 +147,35 @@ img {
   box-shadow: $shadow;
   border: 3px solid $onyx;
   border-radius: $borderRadius;
-  width: 99%;
-  height: 99%;
+  width: 100%;
+  height: 100%;
   border-radius: $borderRadius;
+}
+@media screen and(max-width:1350px) {
+  .navbar {
+    top: 2rem;
+
+    li a {
+      font-size: 4rem;
+    }
+  }
 }
 @media screen and(max-width:1250px) {
   .categorie {
     li {
       font-size: 0.8rem !important;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }
 @media screen and(max-width:1100px) {
+  .gallery-content {
+    margin-left: 0;
+  }
   .radioDisplay input {
     display: none;
-  }
-  .selector {
-    margin-left: 0;
-    width: 100%;
   }
 }
 @media screen and(max-width:650px) {
@@ -164,9 +185,18 @@ img {
   .selection {
     display: flex !important;
   }
+  .radioDisplayH {
+    position: fixed !important;
+    top: 6rem !important;
+  }
   .categorie {
     display: block !important;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    width: 50% !important;
+    margin-left: auto;
+    margin-right: auto;
+    padding-inline-start: 0 !important;
   }
   .content {
     margin-top: 4rem;

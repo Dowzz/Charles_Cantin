@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+
 import { useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
@@ -11,17 +12,18 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
   const history = useHistory();
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
     try {
       setError("");
       setLoading(true);
-      login(emailRef.current.value, passwordRef.current.value);
+      await login(emailRef.current.value, passwordRef.current.value).then(
+        setLoading(false)
+      );
       history.push("/dashboard");
     } catch {
       setError("Impossible de se connecter");
     }
-    setLoading(false);
   }
   return (
     <div>
@@ -30,11 +32,16 @@ export default function Login() {
       <form onSubmit={handleSubmit}>
         <section id="email">
           <label>Email</label>
-          <input type="email" ref={emailRef} required />
+          <input type="email" placeholder="Email" ref={emailRef} required />
         </section>
         <section id="password">
           <label>Mot de passe</label>
-          <input type="password" ref={passwordRef} required />
+          <input
+            type="password"
+            placeholder="password"
+            ref={passwordRef}
+            required
+          />
         </section>
         <button disabled={loading} className="connect-button" type="submit">
           Connexion

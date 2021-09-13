@@ -52,7 +52,7 @@ label {
 .contact-content {
   @include verticalCenter;
   flex-direction: column;
-
+  margin-left: 10rem;
   width: 100%;
   color: $orange;
   input {
@@ -66,10 +66,14 @@ label {
   }
   textarea {
     padding: 10px;
-    width: 75%;
+    width: 85%;
     border-radius: 10px;
     background: $opal;
     text-align: center;
+  }
+  #email {
+    width: 80%;
+    display: inline;
   }
   .button {
     margin-top: 0.5rem;
@@ -84,10 +88,29 @@ label {
     text-align: center;
     margin: 5px;
     padding: 10px;
-    border-radius: $borderRadius;
-    box-shadow: $shadow;
+    @include styleBox;
+    background-color: rgba(0, 0, 0, 0.8);
     width: 50%;
   }
+  .connect-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: $orange;
+    padding: 10px;
+    border-radius: $borderRadius;
+    box-shadow: $shadow;
+    margin-top: 20px;
+  }
+  .connect-button:hover {
+    color: $opal;
+    background-color: rgba(0, 0, 0, 1);
+  }
+}
+#email:focus,
+#name:focus,
+#phone:focus,
+#company:focus,
+#message:focus {
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .adress,
@@ -118,4 +141,10 @@ label {
   padding: 10px;
   color: $onyx;
   font-family: font-2;
+}
+
+@media screen and (max-width: 1100px) {
+  .contact-content {
+    margin-left: 0;
+  }
 }

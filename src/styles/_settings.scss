@@ -12,7 +12,6 @@ $onyx: #32373b;
 
 $borderRadius: 40px;
 $shadow: 0 2px 6px $charbon;
-$shadow2: 0 5px 5px $onyx;
 $minHeight: 95vh;
 
 @mixin verticalCenter {
@@ -20,13 +19,13 @@ $minHeight: 95vh;
   justify-content: center;
   align-items: center;
 }
-::-webkit-scrollbar {
-  width: 0px;
+@mixin styleBox {
+  border-radius: $borderRadius;
+  box-shadow: $shadow;
 }
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+
+@mixin placeBox {
+  margin-left: 20rem;
 }
 body {
   font-family: $font-2;
@@ -42,14 +41,12 @@ li {
 }
 a {
   text-decoration: none;
-  color: $onyx;
-  cursor: pointer;
-}
-a:visited {
-  color: $orange;
 }
 .hamburger {
   display: none;
+}
+::-webkit-scrollbar {
+  width: 0px;
 }
 .responsive {
   z-index: 2;
@@ -60,7 +57,7 @@ a:visited {
   border-radius: $borderRadius;
   font-size: 1.5rem;
   position: fixed;
-  top: 0;
+  top: 0.5rem;
   left: 0;
   display: none;
 }
@@ -72,7 +69,22 @@ button.modal-toggle {
   text-transform: uppercase;
   border: none;
 }
-
+.titre_second {
+  text-align: center;
+  font-family: $font-2;
+  color: transparent;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-size: 4rem;
+  margin-bottom: 20px;
+  letter-spacing: 0.8rem;
+  background: url(https://media.giphy.com/media/fnJWA6rIGgYmlksSEN/giphy.gif)
+    center/cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  margin-block-start: 0;
+}
 @media screen and(max-width:1100px) {
   .responsive {
     display: block;

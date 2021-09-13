@@ -11,6 +11,12 @@ const menuToggle = () => {
   var menu = $(document.getElementsByClassName("hamburger"));
   menu.fadeToggle();
 };
+
+const toggle = () => {
+  var menu = $(document.getElementsByClassName("image"));
+  menu.fadeToggle();
+};
+
 const photosDB = firebase.database().ref("photoDB");
 
 export default function Dashboard() {
@@ -69,65 +75,76 @@ export default function Dashboard() {
       <div className="contenu-auth">
         <h2 className="titre_second">Profil</h2>
         {error && <alert variant="danger">{error}</alert>}
-        <div id="emailuser">
-          <div className="background">
-            <strong>Email Utilisateur: </strong>
-            {currentUser.email}
+        <div className="content">
+          <div className="toolbar">
+            <div className="background">
+              <div className="emailuser">
+                <h3>
+                  <strong>Bienvenue </strong>
+                  {currentUser.email}
+                </h3>
+              </div>
+              <div className="bar">
+                <NavLink exact to="/">
+                  <button className="connect-button">Accueil</button>
+                </NavLink>
+                <NavLink exact to="/update-profile" className="">
+                  <button className="connect-button">
+                    Mettre a jour le profil
+                  </button>
+                </NavLink>
+                <button className="connect-button" onClick={toggle}>
+                  Masquer les image
+                </button>
+                <button className="connect-button" onClick={handleLogout}>
+                  Déconnexion
+                </button>
+              </div>
+              <div className="create">
+                <div className="createtitle">
+                  <h3>Ajouter une photo</h3>
+                </div>
+                <div className="form">
+                  <input
+                    type="text"
+                    placeholder="Nom"
+                    id="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+
+                  <select
+                    id="dropdown"
+                    name="Catégorie"
+                    value={categorie}
+                    onChange={(e) => setCategorie(e.target.value)}
+                  >
+                    <option value="">Choix catégorie</option>
+                    <option value="Mariage">Mariage</option>
+                    <option value="Grossesse">Grossesse</option>
+                    <option value="Bébé">Bébé</option>
+                    <option value="Famille">Famille</option>
+                    <option value="Bapteme">Bapteme</option>
+                    <option value="Couple">Couple</option>
+                    <option value="Portrait">Portrait</option>
+                  </select>
+                  <Uploader
+                    className="upload"
+                    placeholder="Source"
+                    value={source}
+                    onChange={onFileChange}
+                  />
+                  {isLoading ? null : (
+                    <button className="add" onClick={createPhoto}>
+                      Ajouter
+                    </button>
+                  )}
+                </div>
+              </div>
+            </div>
+            <Read />
           </div>
         </div>
-        <div className="create">
-          <h4>Ajouter une photo</h4>
-          <div className="form">
-            <input
-              type="text"
-              placeholder="Nom"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-
-            <select
-              id="dropdown"
-              name="Catégorie"
-              value={categorie}
-              onChange={(e) => setCategorie(e.target.value)}
-            >
-              <option value="">Choix catégorie</option>
-              <option value="Mariage">Mariage</option>
-              <option value="Grossesse">Grossesse</option>
-              <option value="Bébé">Bébé</option>
-              <option value="Famille">Famille</option>
-              <option value="Bapteme">Bapteme</option>
-              <option value="Couple">Couple</option>
-              <option value="Portrait">Portrait</option>
-            </select>
-            <Uploader
-              placeholder="Source"
-              value={source}
-              onChange={onFileChange}
-            />
-            {isLoading ? null : <button onClick={createPhoto}>Ajouter</button>}
-          </div>
-        </div>
-
-        <Read />
-
-        <div>
-          <NavLink exact to="/">
-            <span>Accueil</span>
-          </NavLink>
-        </div>
-        <div>
-          <NavLink exact to="/update-profile" className="">
-            <span>Mettre a jour le profil</span>
-          </NavLink>
-        </div>
-        <button
-          className="connect-button"
-          varient="link"
-          onClick={handleLogout}
-        >
-          Déconnexion
-        </button>
       </div>
     </>
   );

@@ -18,6 +18,11 @@ const menuToggle = () => {
   menu.fadeToggle();
 };
 
+const toggle = () => {
+  var menu = $(document.getElementsByClassName("radioDisplay"));
+  menu.fadeToggle();
+};
+
 const Gallery = () => {
   const [radios, setRadios] = useState("Couple");
   const [photolist, setPhotolist] = useState([]);
@@ -59,33 +64,31 @@ const Gallery = () => {
       <div className="default">
         <Navbar />
       </div>
-      <div className="content">
+      <div className="gallery-content">
+        <h3 className="selection" onClick={toggle}>
+          Filtre
+        </h3>
+        <div className="radioDisplay radioDisplayH">
+          <ul className="categorie">
+            {Radiolist.map((radio) => {
+              return (
+                <li key={radio.id}>
+                  <input
+                    type="radio"
+                    name="radio"
+                    checked={radio.value === radios}
+                    value={radio.value}
+                    id={radio.value}
+                    onChange={handleChange}
+                  />
+                  <label htmlFor={radio.value}>{radio.value}</label>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
         <div className="selector">
-          <h3 className="selection" onClick={menuToggle}>
-            Filtre
-          </h3>
-          <div className="radioDisplay">
-            <ul className="categorie">
-              {Radiolist.map((radio) => {
-                return (
-                  <li key={radio.id}>
-                    <input
-                      type="radio"
-                      name="radio"
-                      checked={radio.value === radios}
-                      value={radio.value}
-                      id={radio.value}
-                      onChange={handleChange}
-                    />
-                    <label htmlFor={radio.value}>{radio.value}</label>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-
           <ScrollUp />
-
           <div className="container-slider">
             {photolist &&
               photolist
