@@ -25,7 +25,7 @@ export default function ForgotPassword() {
   }
   return (
     <>
-      <div className="contenu-auth">
+      <div className="contenu-reset">
         <h2 className="titre_second">Reset du Pasword</h2>
         {error && <alert variant="danger">{error}</alert>}
         {message && <alert variant="success">{message}</alert>}
