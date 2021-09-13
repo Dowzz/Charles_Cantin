@@ -1,13 +1,14 @@
 # Site Démo pour Charles Cantin, Photographe fictif.
 
 Pour le déploiement  
- -- Connexion au site Heroku, relié a Github --   
- -- Lien vers le repo github crée pour le site --  
- -- cliquer sur Automatic Deploy --  
- -- Choisir la branche a déployer (dans mon cas : main) --  
- -- cliquer a nouveau sur automatic deploy --  
+ -- telecharger le zip du dépot sur github --  
+ -- dans le terminal `npm create-react-app charles-cantin ` --  
+ -- extraire le zip dans le dossier charles-cantin prélablement crée --  
+ -- dans le terminal `npm install` pour recuperer les modules nodeJS  --  
+ -- dans le terminal `npm start`pour demarrer la visualisation du projet --  
+ -- pour crée la version de production et le build final dans le terminal `npm run build`  
+ On peut au choix heberger le site sur heroku ou autre, ou alors le tranferer sur un FTP (le dossier build) pour un domaine privé.
 
-Tout le reste se fait automatiquement
 liste des packages et dependences installé :
 `
 npm i node-sass
