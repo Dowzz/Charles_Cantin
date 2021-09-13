@@ -26,7 +26,7 @@ a {
 }
 
 .responsive {
-  z-index: 2;
+  z-index: 4;
   background: #424651;
   color: #d16f2e;
   width: 3rem;
@@ -885,6 +885,11 @@ label {
   text-align: center;
 }
 
+.contact-content #connexion-submit {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 .contact-content #email {
   width: 80%;
   display: inline;
@@ -937,6 +942,7 @@ label {
 #company:focus,
 #message:focus {
   background: rgba(0, 0, 0, 0.8);
+  color: #d16f2e;
 }
 
 .adress,
@@ -1008,7 +1014,7 @@ label {
   border-radius: 40px;
   -webkit-box-shadow: 0 2px 6px #424651;
           box-shadow: 0 2px 6px #424651;
-  background: transparent;
+  background-color: rgba(0, 0, 0, 0.9);
   position: relative;
   margin: auto;
   max-width: 500px;
@@ -1057,6 +1063,46 @@ label {
 .forgot-content {
   width: 100%;
   height: 100vh;
+}
+
+.contenu-reset {
+  width: 100vh;
+  height: 100vh;
+  padding: 20px;
+  border-radius: 40px;
+  -webkit-box-shadow: 0 2px 6px #424651;
+          box-shadow: 0 2px 6px #424651;
+  text-align: center;
+}
+
+.contenu-reset form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contenu-reset a {
+  color: #c5decd;
+}
+
+.contenu-reset a :hover {
+  color: #d16f2e;
+}
+
+.contenu-reset span:hover {
+  color: #d16f2e;
+}
+
+.contenu-reset label {
+  color: #c5decd;
 }
 
 .forgot {
