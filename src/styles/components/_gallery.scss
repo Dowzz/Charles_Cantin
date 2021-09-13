@@ -139,6 +139,8 @@
     font-size: 2rem;
     top: -50px;
     filter: opacity(80%);
+    padding-left: 20px;
+    padding-right: 20px;
     p {
       margin-bottom: 0;
     }
@@ -166,9 +168,7 @@
   .categorie {
     li {
       font-size: 0.8rem !important;
-      width: 50%;
-      margin-left: auto;
-      margin-right: auto;
+      width: 100%;
     }
   }
 }

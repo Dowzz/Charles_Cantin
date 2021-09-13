@@ -552,6 +552,8 @@ button.modal-toggle {
   top: -50px;
   -webkit-filter: opacity(80%);
           filter: opacity(80%);
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .slide .text p {
@@ -580,9 +582,7 @@ button.modal-toggle {
 @media screen and (max-width: 1250px) {
   .categorie li {
     font-size: 0.8rem !important;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
   }
 }
 

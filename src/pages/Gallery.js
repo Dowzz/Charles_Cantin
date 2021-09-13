@@ -27,7 +27,7 @@ const Gallery = () => {
   const [radios, setRadios] = useState("Portrait");
   const [photolist, setPhotolist] = useState([]);
   const Radiolist = [
-    { id: 1, value: "bapteme" },
+    { id: 1, value: "Bapteme" },
     { id: 2, value: "Bébé" },
     { id: 3, value: "Couple" },
     { id: 4, value: "Famille" },
