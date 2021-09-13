@@ -4,6 +4,12 @@ import useModal from "./UseModal";
 import Modal from "./Modal";
 import Login from "../pages/Login";
 import { useAuth } from "../contexts/AuthContext";
+import $ from "jquery";
+
+const menuToggle = () => {
+  var menu = $(document.getElementsByClassName("hamburger"));
+  menu.fadeToggle();
+};
 
 const Navbar = () => {
   const { isShowing: isLoginFormShowed, toggle: toggleLoginForm } = useModal();
@@ -14,27 +20,35 @@ const Navbar = () => {
         <ul>
           <li>
             <NavLink exact to="/" activeClassName="navActive">
-              <span className="overlay">Accueil</span>
+              <span className="overlay" onClick={menuToggle}>
+                Accueil
+              </span>
             </NavLink>
           </li>
           <li>
             <NavLink exact to="/Galerie" activeClassName="navActive">
-              <span className="overlay">Photos</span>
+              <span className="overlay" onClick={menuToggle}>
+                Photos
+              </span>
             </NavLink>
           </li>
           <li>
             <NavLink exact to="/Prestations" activeClassName="navActive">
-              <span className="overlay">Tarifs</span>
+              <span className="overlay" onClick={menuToggle}>
+                Tarifs
+              </span>
             </NavLink>
           </li>
           <li>
             <NavLink exact to="/Me_contacter" activeClassName="navActive">
-              <span className="overlay">Contact</span>
+              <span className="overlay" onClick={menuToggle}>
+                Contact
+              </span>
             </NavLink>
           </li>
           <li>
             {currentUser ? (
-              <Link id="overlay" to="/dashboard">
+              <Link id="overlay" to="/dashboard" onClick={menuToggle}>
                 Dashboard
               </Link>
             ) : (

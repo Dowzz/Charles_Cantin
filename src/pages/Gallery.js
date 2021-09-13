@@ -74,6 +74,7 @@ const Gallery = () => {
               return (
                 <li key={radio.id}>
                   <input
+                    onClick={toggle}
                     type="radio"
                     name="radio"
                     checked={radio.value === radios}

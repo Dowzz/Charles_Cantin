@@ -71,7 +71,7 @@
   .selection {
     background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
-    top: 4rem;
+    top: 3rem;
     right: 0;
     font-family: $font-2;
     color: $orange;
@@ -198,6 +198,9 @@
     margin-left: auto;
     margin-right: auto;
     padding-inline-start: 0 !important;
+    li {
+      margin-right: auto !important;
+    }
   }
   .content {
     margin-top: 4rem;

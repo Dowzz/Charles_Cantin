@@ -128,13 +128,14 @@ button.modal-toggle {
 }
 
 .navbar {
+  text-align: center;
   padding-top: 20px;
   padding-bottom: 10px;
   font-family: "Architects Daughter", cursive;
   font-weight: 800;
   border-radius: 40px;
   text-transform: uppercase;
-  width: 350px;
+  width: 100%;
   z-index: 1;
   position: fixed;
   left: 0;
@@ -209,7 +210,6 @@ button.modal-toggle {
 }
 
 .hamburger .navbar {
-  overflow-y: scroll;
   width: 100%;
   margin: 0;
   display: -webkit-box;
@@ -218,12 +218,13 @@ button.modal-toggle {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 10rem;
   -webkit-box-shadow: 0 2px 6px #424651;
           box-shadow: 0 2px 6px #424651;
 }
 
 .hamburger .navbar ul {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
   width: 100%;
   -webkit-perspective: inherit;
           perspective: inherit;
@@ -238,11 +239,11 @@ button.modal-toggle {
 }
 
 .hamburger .navbar li a {
-  text-align: center;
   font-size: 1.5rem !important;
   margin: 0;
   padding-left: 5px;
   padding-right: 5px;
+  line-height: 0.5;
 }
 
 .hamburger .navbar .social {
@@ -446,7 +447,7 @@ button.modal-toggle {
 .gallery-content .selection {
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
-  top: 4rem;
+  top: 3rem;
   right: 0;
   font-family: "Architects Daughter", cursive;
   color: #d16f2e;
@@ -606,6 +607,9 @@ button.modal-toggle {
     margin-right: auto;
     -webkit-padding-start: 0 !important;
             padding-inline-start: 0 !important;
+  }
+  .categorie li {
+    margin-right: auto !important;
   }
   .content {
     margin-top: 4rem;
