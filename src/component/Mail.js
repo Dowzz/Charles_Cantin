@@ -132,6 +132,7 @@ const Mail = () => {
       </div>
       <input
         className="connect-button"
+        id="connexion-submit"
         type="button"
         value="Envoyer"
         onClick={handleSubmit}
