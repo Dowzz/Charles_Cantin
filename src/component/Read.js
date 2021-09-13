@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useState } from "react/cjs/react.development";
 import firebase from "../firebaseConfig";
 import UpdateDelete from "./UpdateDelete";
-import ScrollUp from "../component/ScrollUp";
 
 const Read = () => {
   const [photolist, setPhotolist] = useState([]);
@@ -26,7 +25,6 @@ const Read = () => {
             <UpdateDelete item={item} key={index} />
           ))}
       </ul>
-      <ScrollUp />
     </div>
   );
 };

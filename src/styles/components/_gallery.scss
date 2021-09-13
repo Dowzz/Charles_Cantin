@@ -142,15 +142,16 @@
       margin-bottom: 0;
     }
   }
+  img {
+    box-shadow: $shadow;
+    border: 3px solid $onyx;
+    border-radius: $borderRadius;
+    width: 100%;
+    height: 100%;
+    border-radius: $borderRadius;
+  }
 }
-img {
-  box-shadow: $shadow;
-  border: 3px solid $onyx;
-  border-radius: $borderRadius;
-  width: 100%;
-  height: 100%;
-  border-radius: $borderRadius;
-}
+
 @media screen and(max-width:1350px) {
   .navbar {
     top: 2rem;

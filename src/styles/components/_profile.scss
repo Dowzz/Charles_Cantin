@@ -1,6 +1,7 @@
 .contenu-auth {
+  width: 100vh;
+  height: 100vh;
   margin-left: 25rem;
-  margin-top: 4rem;
   padding: 20px;
   @include styleBox;
   text-align: center;
@@ -29,11 +30,6 @@
   background-color: rgba(0, 0, 0, 0.5);
   color: $opal;
   padding: 10px;
-
-  .background {
-    padding: 10px;
-    border-radius: $borderRadius;
-  }
   .emailuser {
     text-align: center;
     color: $orange;
@@ -104,6 +100,7 @@
 }
 .item-container {
   display: flex;
+
   .name-container {
     display: flex;
     flex-direction: row;
@@ -114,6 +111,7 @@
   }
   .categorie-container {
     display: flex;
+    flex-direction: row;
     .categoriename {
       margin-right: 20px;
       color: $opal;
@@ -140,8 +138,11 @@
     background-color: rgba(0, 0, 0, 1);
   }
 }
+.image {
+  width: 90%;
+  @include styleBox;
+}
 .lecture {
-  width: 100%;
   ul {
     padding: 0;
     margin: 0;
@@ -151,7 +152,6 @@
   z-index: 5;
   position: fixed;
   bottom: 40px;
-  right: 50%;
   transform: translate(20px);
   width: 40px;
   height: 40px;
@@ -182,7 +182,6 @@
   @include styleBox;
   text-align: center;
   form {
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -199,7 +198,6 @@
   }
 }
 #email {
-  width: 100%;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -212,7 +210,6 @@
   }
 }
 #password {
-  width: 100%;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -225,7 +222,6 @@
   }
 }
 #password-confirm {
-  width: 100%;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -308,7 +304,47 @@
 @media screen and (max-width: 1100px) {
   .contenu-auth {
     padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .contenu-change {
     margin-left: 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .item-container {
+    flex-direction: column;
+  }
+  .image {
+    width: 40% !important;
+    margin-bottom: 1rem;
+  }
+  .create {
+    margin-bottom: 1rem;
+  }
+  .name-container {
+    justify-content: center;
+  }
+  .categorie-container {
+    justify-content: center;
+  }
+  .bar {
+    flex-direction: column;
+  }
+  .connect-button {
+    margin-right: 30% !important;
+    margin-left: 30% !important;
+  }
+  .form {
+    display: grid !important;
+  }
+  h4 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-right: 0;
+  }
+  .lecture {
     width: 100%;
   }
 }

@@ -547,7 +547,7 @@ button.modal-toggle {
   margin-bottom: 0;
 }
 
-img {
+.slide img {
   -webkit-box-shadow: 0 2px 6px #424651;
           box-shadow: 0 2px 6px #424651;
   border: 3px solid #32373b;
@@ -1124,8 +1124,9 @@ body {
 }
 
 .contenu-auth {
+  width: 100vh;
+  height: 100vh;
   margin-left: 25rem;
-  margin-top: 4rem;
   padding: 20px;
   border-radius: 40px;
   -webkit-box-shadow: 0 2px 6px #424651;
@@ -1170,11 +1171,6 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   color: #c5decd;
   padding: 10px;
-}
-
-.toolbar .background {
-  padding: 10px;
-  border-radius: 40px;
 }
 
 .toolbar .emailuser {
@@ -1294,6 +1290,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .item-container .categorie-container .categoriename {
@@ -1327,8 +1327,11 @@ body {
   background-color: black;
 }
 
-.lecture {
-  width: 100%;
+.image {
+  width: 90%;
+  border-radius: 40px;
+  -webkit-box-shadow: 0 2px 6px #424651;
+          box-shadow: 0 2px 6px #424651;
 }
 
 .lecture ul {
@@ -1340,7 +1343,6 @@ body {
   z-index: 5;
   position: fixed;
   bottom: 40px;
-  right: 50%;
   -webkit-transform: translate(20px);
           transform: translate(20px);
   width: 40px;
@@ -1383,7 +1385,6 @@ body {
 }
 
 .contenu-change form {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1409,7 +1410,6 @@ body {
 }
 
 #email {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1430,7 +1430,6 @@ body {
 }
 
 #password {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1451,7 +1450,6 @@ body {
 }
 
 #password-confirm {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1554,7 +1552,61 @@ body {
 @media screen and (max-width: 1100px) {
   .contenu-auth {
     padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .contenu-change {
     margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .item-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .image {
+    width: 40% !important;
+    margin-bottom: 1rem;
+  }
+  .create {
+    margin-bottom: 1rem;
+  }
+  .name-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .categorie-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .bar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .connect-button {
+    margin-right: 30% !important;
+    margin-left: 30% !important;
+  }
+  .form {
+    display: -ms-grid !important;
+    display: grid !important;
+  }
+  h4 {
+    -webkit-margin-before: 0;
+            margin-block-start: 0;
+    -webkit-margin-after: 0;
+            margin-block-end: 0;
+    margin-right: 0;
+  }
+  .lecture {
     width: 100%;
   }
 }
